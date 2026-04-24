@@ -1,0 +1,32 @@
+Topic: AI models
+Level: begineer
+
+Q1: What is the primary function of a neural network in AI models?
+A1: To learn and represent complex relationships between inputs and outputs.
+
+Q2: Easy: What type of machine learning algorithm is used for AI models that can play games like chess or Go?
+A2: Deep Q-Networks (DQN)
+
+Q3: Medium: How do AI models with recurrent neural networks (RNNs) handle sequential data, such as text or speech?
+A3: RNNs process input sequences one step at a time, using previous information to inform current predictions.
+
+Q4: Easy: What is the term for the ability of an AI model to generalize well to new, unseen data?
+A4: Robustness
+
+Q5: Medium: How do transformers in AI models handle long-range dependencies in sequential data?
+A5: Transformers use self-attention mechanisms to weigh importance of different input elements relative to one another.
+
+Q6: Hard: What is the concept of overfitting in AI models, and how can it be mitigated?
+A6: Overfitting occurs when a model becomes too specialized to the training data, failing to generalize well. Techniques like regularization and early stopping can help mitigate this issue.
+
+Q7: Medium: How do convolutional neural networks (CNNs) process visual data, such as images?
+A7: CNNs use convolutional and pooling layers to extract features from input images, which are then used for classification or other tasks.
+
+Q8: Easy: What type of AI model is designed to mimic human decision-making processes?
+A8: Reinforcement Learning
+
+Q9: Hard: How do attention mechanisms in AI models handle multiple inputs simultaneously, such as text and images?
+A9: Attention mechanisms allow the model to focus on specific parts of the input data relative to others, effectively weighing importance.
+
+Q10: Medium: What is the term for the process of training an AI model on a large dataset, often using backpropagation and gradient descent?
+A10: Supervised learning

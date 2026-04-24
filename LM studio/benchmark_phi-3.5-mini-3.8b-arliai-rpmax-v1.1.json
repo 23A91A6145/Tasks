@@ -1,0 +1,35 @@
+{
+  "model": "phi-3.5-mini-3.8b-arliai-rpmax-v1.1",
+  "tasks": [
+    {
+      "task": "factual",
+      "time_sec": 13.8,
+      "words": 36,
+      "response": "The boiling point of water at sea level under standard atmospheric pressure (760 mmHg) and a temperature range between -2 to +5 degrees C, depending on humidity levels is approximately 98 \u00b0C or 34\u00b0F in Celsius."
+    },
+    {
+      "task": "coding",
+      "time_sec": 19.36,
+      "words": 70,
+      "response": "def check_prime(num):  \n    # Checking for numbers less than or equal to the square root of num, and greater than zero    \n    limit = int((math.sqrt(num)) +1)     \n      \n    if (limit >0 ) :        \n        i=2                         \n          \n        while ((i <= limit)):             # Iterating till sqrtn+ 1  \n            j=(int)( num/i);    \n              \n            remainder =(num % int((j)))     \n             \n                if (remainder ==0) :        \n                    return False;           # If divisible, not prime. Returning false            \n          i+= 1  \n        else:      \n            print(\"Number is a Prime Number\")    \n              \nnum = int(input())     \ncheck_prime(num);"
+    },
+    {
+      "task": "reasoning",
+      "time_sec": 14.34,
+      "words": 104,
+      "response": "The rate at which the cats are able to capture mice is constant regardless of time or number of cats involved (assuming there's a sufficient supply). So if it takes one cat five minutes, then two will take ten; three would catch fifteen in that same amount of time. The ratio between quantity and quality remains consistent as long the conditions stay static - meaning 100 mice can be caught by any number of cats given enough time (in this case: a hundred).\nThe answer is therefore unlimited, since there's no upper limit on how many will catch them in that amount of time."
+    },
+    {
+      "task": "creative",
+      "time_sec": 4.96,
+      "words": 25,
+      "response": "The machine learns, its mind expands  \nThrough data and code it grows wise   \nAI evolves with each passing day    \nA digital brain that never dies"
+    },
+    {
+      "task": "summary",
+      "time_sec": 32.0,
+      "words": 235,
+      "response": "Machine Learning (ML) refers to the application of artificial intelligence techniques, allowing computer programs to automatically adjust their behavior based on new information or experiences gained through exposure to large amounts of training data sets over time with minimal human intervention required for fine tuning and optimization processes that are typically performed by a machine learning engineer.\nMachine Learning is an AI subset which enables systems (computers, robots etc.) to learn from experience without being explicitly programmed; it uses algorithms called neural networks or deep learning techniques based on the structure of biological neurons in order for computers and machines to process data through artificial intelligence methods that mimic human brain function.\nMachine Learning is a subset of Artificial Intelligence (AI) which enables computer systems, robots etc., to learn from experience without being explicitly programmed; it uses algorithms called neural networks or deep learning techniques based on the structure and functions of biological neurons in order for computers/machines to process data through artificial intelligence methods that mimic human brain function.\nMachine Learning is a subset of Artificial Intelligence (AI) which enables computer systems, robots etc., to learn from experience without being explicitly programmed; it uses algorithms called neural networks or deep learning techniques based on the structure and functions of biological neurons in order for computers/machines to process data through artificial intelligence methods that mimic human brain function.\nMachine Learning is a subset of Artificial"
+    }
+  ]
+}
