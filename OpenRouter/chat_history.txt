@@ -1,0 +1,14 @@
+
+MODEL: openai/gpt-4o-mini
+QUESTION: Recent update on IPL points table.
+ANSWER: I'm unable to provide real-time updates or current sports scores, including the IPL points table, as my training only includes information up to October 2023, and I do not have browsing capabilities. For the latest IPL points table, please check an official sports news website, the IPL's official website, or a sports app for the most current information.
+--------------------------------------------------
+
+MODEL: openai/gpt-4o-mini
+QUESTION: 3 main uses of claude(Just small points).
+ANSWER: 1. **Conversational AI**: Claude can engage in natural language conversations, providing information, answering questions, and assisting users in various tasks.
+
+2. **Content Generation**: It can generate written content, such as articles, stories, and summaries, based on user prompts and requirements.
+
+3. **Data Analysis and Insights**: Claude can analyze data sets, extract insights, and help with decision-making by providing analytical support and recommendations.
+--------------------------------------------------
