@@ -1,6 +1,0 @@
-
-USER ASKED:
- What is machine learning?
-
-AI RESPONSE:
-I understood your speech successfully.
