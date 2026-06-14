@@ -1,0 +1,93 @@
+Hello Charan, I'm Study Buddy. Let's get started with your quiz on LangChain. Here are 10 multiple-choice questions to test your knowledge:
+
+1. What does LangChain stand for?
+ 
+A) Large Language Chain
+B) Language Chain Framework
+C) LangChain is not an acronym
+D) Learning and Growth Chain
+
+Answer: C) LangChain is not an acronym
+
+2. Who created LangChain?
+ 
+A) Harrison Ford
+B) Harrison Chase
+C) Elon Musk
+D) Andrew Ng
+
+Answer: B) Harrison Chase
+
+3. What is the primary purpose of LangChain?
+ 
+A) To build applications powered by large language models
+B) To create a new programming language
+C) To develop a framework for computer vision
+D) To design a database management system
+
+Answer: A) To build applications powered by large language models
+
+4. What type of models does LangChain leverage?
+ 
+A) Small Language Models
+B) Large Language Models
+C) Medium Language Models
+D) Extra Large Language Models
+
+Answer: B) Large Language Models
+
+5. What is the main idea behind LangChain?
+ 
+A) To use a single language model for all applications
+B) To combine multiple language models to create a chain
+C) To use language models only for chatbots
+D) To replace human intelligence with language models
+
+Answer: B) To combine multiple language models to create a chain
+
+6. What is the benefit of using LangChain for developers?
+ 
+A) It makes development more complicated
+B) It reduces the power of language models
+C) It helps developers build real-world applications using language models
+D) It increases the cost of development
+
+Answer: C) It helps developers build real-world applications using language models
+
+7. What type of framework is LangChain?
+ 
+A) Closed-source framework
+B) Open-source framework
+C) Hybrid framework
+D) Proprietary framework
+
+Answer: B) Open-source framework
+
+8. What is the target audience for the LangChain tutorial?
+ 
+A) Experienced developers
+B) Students
+C) Researchers
+D) Business owners
+
+Answer: B) Students
+
+9. What is an example of an application that can be built using LangChain?
+ 
+A) AI-powered quiz or exam preparation system
+B) Computer vision system
+C) Database management system
+D) Web browser
+
+Answer: A) AI-powered quiz or exam preparation system
+
+10. What is the key concept used in LangChain for preprocessing educational materials?
+ 
+A) Semantic chunking
+B) Syntax highlighting
+C) Data compression
+D) Image recognition
+
+Answer: A) Semantic chunking
+
+Let me know if you need any help or clarification on any of these questions, Charan. Good luck with your quiz!

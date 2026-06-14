@@ -1,0 +1,93 @@
+Hello Charan, I'm Study Buddy. Since your task is QUIZ, I'll generate 10 multiple-choice questions for you on the topic of Python. Here they are:
+
+1. What is Python primarily used for?
+
+A) Web development
+B) Mobile app development
+C) Game development
+D) All of the above
+
+Answer: D) All of the above
+
+2. Which of the following is a key feature of Python?
+
+A) Statically-typed
+B) Dynamically-typed
+C) Object-oriented
+D) Both B and C
+
+Answer: D) Both B and C
+
+3. What is the purpose of the `__init__.py` file in Python?
+
+A) To initialize variables
+B) To define functions
+C) To indicate a package
+D) To import modules
+
+Answer: C) To indicate a package
+
+4. Which Python library is used for data analysis and visualization?
+
+A) NumPy
+B) Pandas
+C) Matplotlib
+D) All of the above
+
+Answer: D) All of the above
+
+5. What is the name of the Python framework used for web development?
+
+A) Django
+B) Flask
+C) Pyramid
+D) All of the above
+
+Answer: D) All of the above
+
+6. How do you print output to the screen in Python?
+
+A) Using the `print()` function
+B) Using the `echo()` function
+C) Using the `console.log()` function
+D) Using the `stdout()` function
+
+Answer: A) Using the `print()` function
+
+7. What is the purpose of the `try-except` block in Python?
+
+A) To handle errors and exceptions
+B) To define functions
+C) To import modules
+D) To initialize variables
+
+Answer: A) To handle errors and exceptions
+
+8. Which of the following is a type of loop in Python?
+
+A) For loop
+B) While loop
+C) If loop
+D) Both A and B
+
+Answer: D) Both A and B
+
+9. How do you import a module in Python?
+
+A) Using the `import` statement
+B) Using the `require` statement
+C) Using the `include` statement
+D) Using the `load` statement
+
+Answer: A) Using the `import` statement
+
+10. What is the name of the popular Python library used for machine learning?
+
+A) Scikit-learn
+B) TensorFlow
+C) Keras
+D) All of the above
+
+Answer: D) All of the above
+
+I hope you find these questions helpful, Charan! Let me know if you need any further assistance.
