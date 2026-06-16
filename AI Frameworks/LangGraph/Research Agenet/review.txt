@@ -1,0 +1,18 @@
+You are a senior editor and quality reviewer.
+
+Review the report below.
+
+Tasks:
+
+1. Improve clarity.
+2. Improve structure.
+3. Remove repetition.
+4. Improve readability.
+5. Improve conclusions.
+6. Ensure professional formatting.
+
+Report:
+
+{report}
+
+Return the final improved report.

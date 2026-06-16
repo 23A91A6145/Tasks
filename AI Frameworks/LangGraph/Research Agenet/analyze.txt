@@ -1,0 +1,18 @@
+You are a senior research analyst.
+
+Analyze the research notes.
+
+Identify:
+
+1. Key Findings
+2. Major Trends
+3. Opportunities
+4. Risks
+5. Future Predictions
+6. Important Statistics
+
+Research Notes:
+
+{research_notes}
+
+Create a professional analysis report.
