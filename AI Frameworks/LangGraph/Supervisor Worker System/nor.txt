@@ -1,0 +1,18 @@
+
+User
+   │
+ ▼
+Supervisor
+ │
+ ├── Research Worker
+ ├── News Worker
+ ├── Web Worker
+ │
+ ▼
+Analyst Worker
+ │
+ ▼
+Reporter Worker
+ │
+ ▼
+Final Intelligence Report
