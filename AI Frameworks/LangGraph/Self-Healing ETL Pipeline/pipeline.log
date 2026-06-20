@@ -1,0 +1,995 @@
+from loguru import logger
+
+logger.add(
+    "logs/pipeline.log",
+    rotation="1 MB"
+)2026-06-20 12:59:01.961 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 12:59:02.343 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:01:41.736 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:01:41.736 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:01:41.748 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:01:41.748 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:01:41.749 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:01:41.749 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:01:41.752 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:01:41.752 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:01:41.756 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:01:41.756 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:01:41.764 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:01:41.764 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:01:41.764 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:01:41.764 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:01:41.771 | SUCCESS  | agents.cleaner:save_cleaned_data:84 - Saved: data/cleaned/iris_cleaned.csv
+2026-06-20 13:01:41.771 | SUCCESS  | agents.cleaner:save_cleaned_data:84 - Saved: data/cleaned/iris_cleaned.csv
+2026-06-20 13:04:38.089 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:04:38.089 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:04:38.089 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:04:38.107 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:04:38.107 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:04:38.107 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:04:38.109 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:04:38.109 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:04:38.109 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:04:38.111 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:04:38.111 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:04:38.111 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:04:38.114 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:04:38.114 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:04:38.114 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:04:38.120 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:04:38.120 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:04:38.120 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:04:38.120 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:04:38.120 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:04:38.120 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:04:38.122 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:04:38.122 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:04:38.122 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:04:38.125 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:04:38.125 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:04:38.125 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:04:38.131 | SUCCESS  | agents.transformer:save_transformed_data:74 - Saved: data/transformed/iris_transformed.csv
+2026-06-20 13:04:38.131 | SUCCESS  | agents.transformer:save_transformed_data:74 - Saved: data/transformed/iris_transformed.csv
+2026-06-20 13:04:38.131 | SUCCESS  | agents.transformer:save_transformed_data:74 - Saved: data/transformed/iris_transformed.csv
+2026-06-20 13:07:40.182 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:07:40.182 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:07:40.182 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:07:40.182 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:07:40.191 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:07:40.191 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:07:40.191 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:07:40.191 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:07:40.193 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:07:40.193 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:07:40.193 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:07:40.193 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:07:40.197 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:07:40.197 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:07:40.197 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:07:40.197 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:07:40.200 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:07:40.200 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:07:40.200 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:07:40.200 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:07:40.203 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:07:40.203 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:07:40.203 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:07:40.203 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:07:40.203 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:07:40.203 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:07:40.203 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:07:40.203 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:07:40.203 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:07:40.203 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:07:40.203 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:07:40.203 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:07:40.208 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:07:40.208 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:07:40.208 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:07:40.208 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:07:40.209 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:07:40.209 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:07:40.209 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:07:40.209 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:07:40.214 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:07:40.214 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:07:40.214 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:07:40.214 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.907 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:10:36.907 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:10:36.907 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:10:36.907 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:10:36.907 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:10:36.928 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:10:36.928 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:10:36.928 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:10:36.928 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:10:36.928 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:10:36.930 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:10:36.930 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:10:36.930 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:10:36.930 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:10:36.930 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:10:36.934 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:10:36.934 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:10:36.934 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:10:36.934 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:10:36.934 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:10:36.938 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:10:36.938 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:10:36.938 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:10:36.938 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:10:36.938 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:10:36.951 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:10:36.951 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:10:36.951 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:10:36.951 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:10:36.951 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:10:36.951 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:10:36.951 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:10:36.951 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:10:36.951 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:10:36.951 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:10:36.951 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:10:36.951 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:10:36.951 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:10:36.951 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:10:36.951 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:10:36.959 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:10:36.959 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:10:36.959 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:10:36.959 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:10:36.959 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:10:36.959 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:10:36.959 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:10:36.959 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:10:36.959 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:10:36.959 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:10:36.965 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.965 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.965 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.965 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.965 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:10:36.965 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:10:36.965 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:10:36.965 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:10:36.965 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:10:36.965 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:10:37.000 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:10:37.000 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:10:37.000 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:10:37.000 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:10:37.000 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:15:11.572 | INFO     | agents.recovery:recover:107 - Recovery Started
+2026-06-20 13:15:11.572 | INFO     | agents.recovery:recover:107 - Recovery Started
+2026-06-20 13:15:11.588 | SUCCESS  | agents.recovery:recover:149 - Recovery Completed
+2026-06-20 13:15:11.588 | SUCCESS  | agents.recovery:recover:149 - Recovery Completed
+2026-06-20 13:15:11.600 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:15:11.600 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:15:11.603 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:15:11.603 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.225 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.230 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.238 | INFO     | agents.cleaner:clean:90 - Cleaning Started
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.244 | INFO     | agents.cleaner:remove_duplicates:24 - Duplicates Removed: 0
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.251 | INFO     | agents.cleaner:handle_missing_values:44 - Missing values handled
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.262 | INFO     | agents.cleaner:clean_text_columns:62 - Text cleaned
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.267 | SUCCESS  | agents.cleaner:clean:100 - Cleaning Completed
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.270 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.280 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.284 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 13:20:53.325 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.464 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.470 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.472 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.475 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.477 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.479 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.481 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.483 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.484 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.485 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.501 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:41:26.503 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.956 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.964 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.966 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.979 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.985 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.986 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.988 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.994 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:30.998 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.002 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.003 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 14:56:31.028 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.704 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.711 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.716 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.717 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.732 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.737 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.741 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.745 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.752 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.754 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.758 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.763 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:12:56.793 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:14:09.330 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.813 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.822 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.825 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.826 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.828 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.830 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.831 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.832 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.834 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.835 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.837 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.838 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:37:35.856 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.074 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.085 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.088 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.099 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.106 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.114 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.115 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.117 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.118 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.129 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.132 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.165 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:39:03.180 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:40:04.435 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.925 | INFO     | agents.extractor:extract:47 - Loading file: data/raw/iris.csv
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.937 | SUCCESS  | agents.extractor:extract:58 - Extraction completed
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.941 | INFO     | agents.cleaner:clean:68 - Cleaning Started
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.949 | INFO     | agents.cleaner:remove_duplicates:20 - Duplicates Removed: 0
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.958 | INFO     | agents.cleaner:handle_missing_values:40 - Missing values handled
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.963 | INFO     | agents.cleaner:clean_text_columns:60 - Text cleaned
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.971 | SUCCESS  | agents.cleaner:clean:78 - Cleaning Completed
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.973 | INFO     | agents.transformer:transform:80 - Transformation Started
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.983 | SUCCESS  | agents.transformer:transform:92 - Transformation Completed
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.986 | INFO     | agents.validator:validate:93 - Validation Started
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.989 | SUCCESS  | agents.validator:validate:152 - Validation Completed
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:44.991 | INFO     | agents.loader:load:27 - Database Loading Started
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.029 | SUCCESS  | agents.loader:load:38 - Database Loading Completed
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.030 | SUCCESS  | agents.monitor:save_metrics:68 - Metrics Saved
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:46:45.034 | INFO     | agents.analyst:analyze:18 - AI Analysis Started
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed
+2026-06-20 15:47:56.548 | SUCCESS  | agents.analyst:analyze:82 - AI Analysis Completed

@@ -1,0 +1,7 @@
+execution_time: 2026-06-20 15:12:56.793578
+status: PASS
+rows: 150
+columns: 10
+duration_seconds: 0.1015
+table_name: iris_data
+success_rate: 100%
