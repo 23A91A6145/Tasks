@@ -1,0 +1,8 @@
+streamlit
+crewai
+crewai-tools
+langchain
+langchain-ollama
+ollama
+python-dotenv
+pandas
