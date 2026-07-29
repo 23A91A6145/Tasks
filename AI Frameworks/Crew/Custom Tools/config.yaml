@@ -1,0 +1,16 @@
+log:
+  level: INFO
+  json_output: true
+  file: null
+
+cache:
+  default_ttl: 300
+  maxsize: 128
+
+rate_limit:
+  default_calls_per_second: 10
+
+server:
+  host: 127.0.0.1
+  port: 8000
+  reload: false

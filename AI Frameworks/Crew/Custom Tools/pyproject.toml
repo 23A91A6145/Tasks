@@ -1,0 +1,132 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crew-tools"
+dynamic = ["version"]
+description = "LangChain-compatible AI tool library: word counter, unit converter, calculator, validator, text tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["langchain", "ai", "tools", "crew-ai", "llm", "word-counter", "unit-converter"]
+authors = [
+    { name = "Crew Tools Team" },
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "langchain-core>=0.1.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "hypothesis>=6.0",
+    "langchain-openai>=0.2.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "pre-commit>=4.0",
+    "ruff>=0.11.0",
+]
+api = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "httpx>=0.28.0",
+]
+web = [
+    "httpx>=0.28.0",
+    "beautifulsoup4>=4.12.0",
+    "ddgs>=1.0.0",
+]
+data = [
+    "pandas>=2.0.0",
+]
+code = [
+    "ruff>=0.11.0",
+    "autopep8>=2.0.0",
+]
+templates = [
+    "jinja2>=3.1.0",
+    "python-dateutil>=2.8.0",
+    "pytz>=2024.0",
+]
+charts = [
+    "matplotlib>=3.8.0",
+    "numpy>=1.26.0",
+]
+ui = [
+    "streamlit>=1.38.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/anomalyco/crew-tools"
+Source = "https://github.com/anomalyco/crew-tools"
+Tracker = "https://github.com/anomalyco/crew-tools/issues"
+
+[project.scripts]
+crew-tools = "crew_tools.cli:main"
+word-counter = "word_counter_app.main:main"
+unit-converter = "unit_converter_app.main:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "crew_tools._version.__version__" }
+
+[tool.setuptools.packages.find]
+include = [
+    "crew_tools*",
+    "word_counter_app*",
+    "unit_converter_app*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short -q"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "property: property-based tests",
+    "fuzz: fuzzing tests",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "BLE001",  # blind-except: intentional in tool error handling
+    "S110",    # try-except-pass: intentional in fuzz tests
+]
+
+[tool.coverage.run]
+source = ["crew_tools", "word_counter_app", "unit_converter_app"]
+omit = [
+    "*/_version.py",
+    "*/cli.py",
+    "*/main.py",
+    "*/__main__.py",
+    "*/date_tools.py",
+    "*/utility_tools.py",
+    "*/ui/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "def __repr__",
+    "if TYPE_CHECKING:",
+]
+fail_under = 85
