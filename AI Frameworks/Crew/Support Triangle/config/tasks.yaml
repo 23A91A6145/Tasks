@@ -1,0 +1,96 @@
+routing_task:
+  description: >
+    Analyze the customer's support request and classify it into exactly one category:
+    "billing", "technical", "sales", or "escalate".
+
+    - billing: payment failures, invoice questions, refunds, subscription changes, charge disputes
+    - technical: login issues, error messages, feature not working, system bugs, configuration help
+    - sales: pricing questions, plan comparisons, feature inquiries, upgrade paths, purchasing help
+    - escalate: unclear requests, multiple unrelated issues, requests outside support scope
+
+    Customer request: {query}
+
+    Return only the classification label and a one-sentence justification.
+  expected_output: >
+    A classification label ("billing", "technical", "sales", or "escalate") with a brief
+    justification explaining why that category was chosen.
+
+billing_task:
+  description: >
+    Resolve the customer's billing issue thoroughly and empathetically.
+
+    You have access to these tools:
+    - **Currency Converter**: convert amounts between currencies for international payments
+    - **Company Data**: look up customer accounts, invoices, orders, and payment history
+
+    Customer request: {query}
+
+    Investigate the billing concern: incorrect charges, failed payments, refund eligibility,
+    subscription plan changes, invoice discrepancies, or payment method updates.
+    Use your tools to verify information and provide accurate, step-by-step resolution.
+  expected_output: >
+    A complete billing support response that addresses the customer's concern with empathy,
+    clear explanation of the issue, actionable steps to resolve it, and any relevant policy
+    information. When possible, cite specific records retrieved from company data or currency tools.
+
+technical_task:
+  description: >
+    Diagnose and resolve the customer's technical issue step by step.
+
+    You have access to these tools:
+    - **Web Search**: search the internet for current solutions, documentation, or known issues
+    - **Calculator**: perform calculations for system requirements, time estimates, etc.
+
+    Customer request: {query}
+
+    Consider: login/authentication failures, application errors, feature malfunctions,
+    configuration problems, connectivity issues, or browser/device compatibility.
+    Use your tools to find solutions and provide clear, actionable steps.
+  expected_output: >
+    A complete technical support response with diagnosis, step-by-step troubleshooting
+    instructions, and a clear solution. Include references to documentation or search
+    results where applicable.
+
+sales_task:
+  description: >
+    Address the customer's sales inquiry with accurate product knowledge.
+
+    You have access to these tools:
+    - **Web Search**: research current pricing, competitors, or product comparisons
+    - **Company Data**: look up product plans, features, pricing, and customer account details
+    - **Weather**: provide location-specific context when relevant (e.g., weather-related products)
+
+    Customer request: {query}
+
+    Handle questions about pricing plans and tiers, feature comparisons, product capabilities,
+    upgrade/downgrade options, promotional offers, or purchase guidance.
+    Use your tools to provide accurate, current information.
+  expected_output: >
+    A complete sales support response that answers the customer's questions, provides relevant
+    product/plan information, and guides them toward the right purchasing decision. Reference
+    specific plan details and pricing from company data.
+
+validation_task:
+  description: >
+    You are a quality assurance reviewer. Review the specialist's response against
+    the original customer query for accuracy, completeness, and professionalism.
+
+    Original customer query: {query}
+    Specialist response: {response}
+
+    Check EVERY criterion:
+    [ ] Completeness — does the response fully address what the customer asked?
+    [ ] Accuracy — is the information factual and free of hallucinations?
+    [ ] Tone — is the language professional, empathetic, and appropriate?
+    [ ] Actionability — are all steps clear, specific, and actionable?
+    [ ] Conciseness — is the response focused without unnecessary padding?
+
+    Output format (strict):
+    If ALL criteria pass, start your response with exactly: APPROVED
+    Then provide a brief confirmation.
+
+    If ANY criterion fails, start your response with exactly: REVISE
+    Then list each issue on a new line with what specifically needs to be fixed.
+  expected_output: >
+    "APPROVED" followed by a confirmation, OR "REVISE" followed by specific,
+    actionable revision requests for each quality issue found.
