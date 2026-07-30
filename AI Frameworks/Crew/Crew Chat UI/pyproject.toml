@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "crew-chat-ui"
+version = "5.0.0"
+description = "Production-grade multi-agent AI chat — 100% free with Ollama. Research, Analysis, Writing agents in one UI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["crewai", "ai", "chat", "streamlit", "multi-agent", "ollama", "free", "local"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "pytest-cov>=5.0.0"]
+ui = ["streamlit>=1.35.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

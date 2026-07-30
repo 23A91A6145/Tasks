@@ -1,0 +1,19 @@
+{
+  "session_id": "current",
+  "updated_at": "2026-07-30T16:09:55.329549",
+  "message_count": 2,
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is CrewAI and how does it work?",
+      "timestamp": "04:09 PM",
+      "tokens": 9
+    },
+    {
+      "role": "assistant",
+      "content": "## What is CrewAI?\n\nCrewAI is a framework for orchestrating autonomous AI agents. It enables multiple AI agents to collaborate on complex tasks.\n\n### Key Features:\n- **Role-based agents** \u2014 Each agent has a specific role and goal\n- **Task delegation** \u2014 Agents work sequentially or hierarchically\n- **Tool integration** \u2014 Agents can use various tools\n- **Process control** \u2014 Define how agents collaborate\n\n### Example Use Cases:\n- Research & report generation\n- Code review & debugging\n- Content creation & editing\n- Data analysis & visualization\n\nWould you like me to demonstrate any specific capability?",
+      "timestamp": "04:09 PM",
+      "tokens": 126
+    }
+  ]
+}
