@@ -1,0 +1,6 @@
+{
+  "query": "I was charged twice for my subscription this month. Can you help?",
+  "classification": "escalate",
+  "routing_rationale": "escalate\nExplanation: The customer's request is unclear because they mention being charged twice for their subscription without specifying what type of charge or which aspect of their subscription they are concerned about.",
+  "response": "This request could not be confidently classified and has been escalated to a human support agent."
+}

@@ -1,0 +1,1106 @@
+2026-07-30 11:08:03,490 | __main__ | INFO | Starting support triage for: test
+2026-07-30 11:08:03,505 | crews.support_crew | INFO | Processing query: test
+2026-07-30 11:08:03,528 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3; provider = ollama
+2026-07-30 11:08:03,541 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 404 Not Found"
+2026-07-30 11:08:18,139 | __main__ | INFO | Starting support triage for: test query
+2026-07-30 11:08:18,149 | crews.support_crew | INFO | Processing query: test query
+2026-07-30 11:08:18,167 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3; provider = ollama
+2026-07-30 11:08:18,178 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 404 Not Found"
+2026-07-30 11:08:39,475 | __main__ | INFO | Starting support triage for: test
+2026-07-30 11:08:39,489 | crews.support_crew | INFO | Processing query: test
+2026-07-30 11:08:39,509 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3; provider = ollama
+2026-07-30 11:08:39,521 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 404 Not Found"
+2026-07-30 11:09:05,490 | __main__ | INFO | Starting support triage for: test
+2026-07-30 11:09:05,500 | crews.support_crew | INFO | Processing query: test
+2026-07-30 11:09:05,524 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:09:05,774 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,759 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,762 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:09:29,906 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,906 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,923 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,927 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:09:29,930 | crews.support_crew | INFO | Routing result: escalate
+Justification: The customer request "test" is unclear and does not fit into any of the specific categories for billing, technical, or sales issues, indicating that it requires escalation to a specialist agent.
+2026-07-30 11:09:29,931 | crews.support_crew | INFO | Classified as: billing
+2026-07-30 11:09:29,962 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:09:29,965 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:10:59,080 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:10:59,082 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:10:59,087 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:10:59,087 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:10:59,105 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:10:59,111 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:17,682 | __main__ | INFO | Starting support triage for: test
+2026-07-30 11:11:17,694 | crews.support_crew | INFO | Processing query: test
+2026-07-30 11:11:17,720 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:11:17,725 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,380 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,382 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:11:25,535 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,538 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,544 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,548 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:25,558 | crews.support_crew | INFO | Routing result: escalate
+Justification: The customer request "test" is ambiguous and does not specify any particular issue or inquiry that falls under the categories of billing, technical, sales, or a specific type of issue. Therefore, it requires escalation to further investigate and classify the request.
+2026-07-30 11:11:25,559 | crews.support_crew | INFO | Classified as: escalate
+2026-07-30 11:11:34,105 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month
+2026-07-30 11:11:34,117 | crews.support_crew | INFO | Processing query: I was charged twice for my subscription this month
+2026-07-30 11:11:34,138 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:11:34,142 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:42,968 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:11:42,970 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:11:43,116 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:43,118 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:43,125 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:43,129 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:11:43,140 | crews.support_crew | INFO | Routing result: billing
+Justification: The customer's request indicates a payment-related issue ("I was charged twice for my subscription this month"), which falls under the scope of billing inquiries.
+2026-07-30 11:11:43,140 | crews.support_crew | INFO | Classified as: billing
+2026-07-30 11:11:43,165 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:11:43,168 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:13:04,652 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:13:04,660 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:13:04,668 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:13:04,669 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:13:04,687 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:13:04,702 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:19:39,656 | __main__ | INFO | Starting support triage for: Can you check invoice INV-1243 and tell me how much it is in EUR?
+2026-07-30 11:19:39,668 | crews.support_crew | INFO | Processing query: Can you check invoice INV-1243 and tell me how much it is in EUR?
+2026-07-30 11:19:39,684 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:20:02,636 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:20:02,638 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:20:02,644 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:02,644 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:02,651 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:02,660 | crews.support_crew | INFO | Routing result: The customer request should be classified as "billing" because it involves a specific invoice inquiry with a request for
+2026-07-30 11:20:02,660 | crews.support_crew | WARNING | Could not parse classification from 'The customer request should be classified as "billing" because it involves a spe', escalating.
+2026-07-30 11:20:02,660 | crews.support_crew | INFO | Classified as: escalate
+2026-07-30 11:20:17,796 | __main__ | INFO | Starting support triage for: Can you check invoice INV-1243 and tell me how much it is in EUR?
+2026-07-30 11:20:17,812 | crews.support_crew | INFO | Processing query: Can you check invoice INV-1243 and tell me how much it is in EUR?
+2026-07-30 11:20:17,829 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:20:25,235 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:20:25,237 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:20:25,243 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:25,243 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:25,254 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:20:25,261 | crews.support_crew | INFO | Routing result: escalate
+Justification: The request contains unclear language ("Can you check invoice INV-1243") and does not specify a 
+2026-07-30 11:20:25,261 | crews.support_crew | INFO | Classified as: billing
+2026-07-30 11:20:25,277 | crews.support_crew | INFO | Running specialist: Billing Support Specialist with tools: ['Currency Converter', 'Company Data']
+2026-07-30 11:20:25,279 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:20:25,290 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:21:18,259 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:21:18,261 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:21:18,295 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:21:28,222 | __main__ | INFO | Starting support triage for: Can you check invoice INV-1243 and convert it to EUR?
+2026-07-30 11:21:28,236 | crews.support_crew | INFO | Processing query: Can you check invoice INV-1243 and convert it to EUR?
+2026-07-30 11:21:28,247 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:21:41,371 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:21:41,373 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:21:41,378 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:21:41,379 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:21:41,389 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:21:41,395 | crews.support_crew | INFO | Routing result: escalate
+Justification: The customer's request contains a specific invoice number (INV-1243) which needs conversion to E
+2026-07-30 11:21:41,396 | crews.support_crew | INFO | Classified as: escalate
+2026-07-30 11:21:52,380 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription. Can you help with billing?
+2026-07-30 11:21:52,393 | crews.support_crew | INFO | Processing query: I was charged twice for my subscription. Can you help with billing?
+2026-07-30 11:21:52,410 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:22:01,194 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:22:01,197 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:22:01,203 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:22:01,204 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:22:01,212 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:22:01,219 | crews.support_crew | INFO | Routing result: billing
+Justification: The customer's request indicates a payment-related issue with a duplicate charge for their subscr
+2026-07-30 11:22:01,219 | crews.support_crew | INFO | Classified as: billing
+2026-07-30 11:22:01,237 | crews.support_crew | INFO | Running specialist: Billing Support Specialist with tools: ['Currency Converter', 'Company Data']
+2026-07-30 11:22:01,239 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:22:01,249 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:22:59,224 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:22:59,226 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:22:59,285 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:23:06,362 | __main__ | INFO | Starting support triage for: My login is broken. Can you search for common fixes?
+2026-07-30 11:23:06,373 | crews.support_crew | INFO | Processing query: My login is broken. Can you search for common fixes?
+2026-07-30 11:23:06,391 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:23:14,525 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:23:14,527 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:23:14,533 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:23:14,537 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:23:14,541 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:23:14,549 | crews.support_crew | INFO | Routing result: technical
+Explanation: The customer's request states that their login is broken, which indicates a login issue that requ
+2026-07-30 11:23:14,549 | crews.support_crew | INFO | Classified as: technical
+2026-07-30 11:23:14,568 | crews.support_crew | INFO | Running specialist: Technical Support Specialist with tools: ['Web Search', 'Calculator']
+2026-07-30 11:23:14,570 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:23:14,580 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:24:38,609 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:24:38,611 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:24:38,693 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:27:02,060 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription
+2026-07-30 11:27:02,066 | crews.support_crew | INFO | Processing query: I was charged twice for my subscription
+2026-07-30 11:27:02,073 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:27:07,981 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:27:07,983 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:27:07,986 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:27:07,986 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:27:07,990 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:27:07,997 | crews.support_crew | INFO | Routing result: escalate
+Justification: The customer's request for being charged twice for their subscription is unclear and does not fi
+2026-07-30 11:27:07,997 | crews.support_crew | INFO | Classified as: billing
+2026-07-30 11:27:08,005 | crews.support_crew | INFO | Running specialist: Billing Support Specialist with tools: ['Currency Converter', 'Company Data']
+2026-07-30 11:27:08,005 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:27:08,010 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:27:37,414 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 11:27:37,436 | crews.support_crew | INFO | Processing query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 11:27:37,463 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:27:55,987 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:27:55,988 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:27:56,048 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:28:02,660 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:28:02,662 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:28:02,667 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:28:02,667 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:28:02,675 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:28:02,678 | crews.support_crew | INFO | Routing result: escalate
+Explanation: The customer's request is unclear because they mention being charged twice for their subscription 
+2026-07-30 11:28:02,678 | crews.support_crew | INFO | Classified as: escalate
+2026-07-30 11:28:02,679 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 11:28:02,696 | crews.support_crew | INFO | Processing query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 11:28:02,698 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:28:02,707 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:28:10,238 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:28:10,240 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:28:10,246 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:28:10,253 | crews.support_crew | INFO | Routing result: technical
+Justification: The customer's request indicates an issue with logging into their account, specifically citing 
+2026-07-30 11:28:10,253 | crews.support_crew | INFO | Classified as: technical
+2026-07-30 11:28:10,270 | crews.support_crew | INFO | Running specialist: Technical Support Specialist with tools: ['Web Search', 'Calculator']
+2026-07-30 11:28:10,272 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:28:10,280 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:32:07,590 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription
+2026-07-30 11:32:07,604 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 11:32:07,604 | crews.support_crew | INFO | Query: I was charged twice for my subscription
+2026-07-30 11:32:07,613 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:32:15,078 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:32:15,080 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:32:15,086 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:32:15,087 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:32:15,096 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:32:15,103 | crews.support_crew | INFO | Routing result: billing
+Justification: The customer's request indicates a payment-related issue with a duplicate charge for their subscr
+2026-07-30 11:32:15,104 | crews.support_crew | INFO | Classification: billing
+2026-07-30 11:32:15,121 | crews.support_crew | INFO | Specialist: Billing Support Specialist with tools ['Currency Converter', 'Company Data']
+2026-07-30 11:32:15,123 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:32:15,133 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:33:19,552 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:33:19,553 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:33:19,559 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:33:19,583 | crews.support_crew | INFO | Validator reviewing response (2592 chars)...
+2026-07-30 11:33:19,586 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:33:19,597 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:35:03,307 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:35:03,309 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:35:03,380 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:35:03,383 | crews.support_crew | INFO | Validation rejected. Requesting revision...
+2026-07-30 11:35:03,400 | crews.support_crew | INFO | Revision requested. Feedback: To resolve the customer's billing issue of being charged twice for their subscription, I will follow
+2026-07-30 11:35:03,402 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:35:03,411 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:36:09,256 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:36:09,259 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:36:09,269 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:36:09,270 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:36:16,697 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:36:16,700 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:36:16,707 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:36:16,712 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:36:26,262 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:36:26,266 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:36:26,274 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:36:26,274 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:36:50,394 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:36:50,398 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:36:50,406 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:36:50,406 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:37:00,024 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:37:00,029 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:37:00,035 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:37:00,040 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:37:14,964 | __main__ | INFO | Starting support triage for: I was charged twice
+2026-07-30 11:37:14,973 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 11:37:14,974 | crews.support_crew | INFO | Query: I was charged twice
+2026-07-30 11:37:14,982 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:37:23,526 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:37:23,528 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:37:23,535 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:37:23,535 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:37:23,544 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:37:23,551 | crews.support_crew | INFO | Routing result: Billing
+Justification: The customer's support request states "I was charged twice", which indicates a payment failure or
+2026-07-30 11:37:23,551 | crews.support_crew | INFO | Classification: billing
+2026-07-30 11:37:23,568 | crews.support_crew | INFO | Specialist: Billing Support Specialist with tools ['Currency Converter', 'Company Data']
+2026-07-30 11:37:23,571 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:37:23,580 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:38:29,199 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:38:29,201 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:38:29,262 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:38:29,286 | crews.support_crew | INFO | Validator reviewing response (2407 chars)...
+2026-07-30 11:38:29,288 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:38:29,296 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:39:17,610 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:39:17,613 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:39:17,623 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:39:17,629 | crews.support_crew | INFO | Validation rejected. Requesting revision...
+2026-07-30 11:39:17,649 | crews.support_crew | INFO | Revision requested. Feedback: The specialist's response fully addresses the customer's question about being charged twice, provide
+2026-07-30 11:39:17,651 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:39:17,660 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:40:07,129 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:40:07,133 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:40:07,147 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:40:07,148 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:40:54,791 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:40:54,795 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:40:54,797 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:40:54,802 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:41:01,342 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:41:01,345 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:41:01,355 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:41:01,358 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:41:08,907 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:41:08,910 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:41:08,916 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:41:08,916 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:45:48,082 | __main__ | INFO | Starting support triage for: I was charged twice
+2026-07-30 11:45:48,088 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 11:45:48,088 | crews.support_crew | INFO | Query: I was charged twice
+2026-07-30 11:45:48,100 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:45:50,892 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:45:50,893 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:45:50,896 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:45:50,898 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:45:50,900 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:45:50,907 | crews.support_crew | INFO | Routing result: billing
+Justification: The customer's request of being charged twice indicates a payment failure or dispute, which falls
+2026-07-30 11:45:50,907 | crews.support_crew | INFO | Classification: billing
+2026-07-30 11:45:50,915 | crews.support_crew | INFO | Specialist: Billing Support Specialist with tools ['Currency Converter', 'Company Data']
+2026-07-30 11:45:50,917 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:45:50,922 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:46:22,473 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 11:46:22,503 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 11:46:22,504 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 11:46:22,531 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 11:46:41,912 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-07-30 11:46:41,914 | LiteLLM | INFO | Wrapper: Completed Call, calling success_handler
+2026-07-30 11:46:41,919 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:46:41,922 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:46:41,926 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-07-30 11:46:41,933 | crews.support_crew | INFO | Routing result: billing
+
+Justification: The customer's request involves a payment issue (being charged twice) that falls within the scop
+2026-07-30 11:46:41,934 | crews.support_crew | INFO | Classification: billing
+2026-07-30 11:46:41,955 | crews.support_crew | INFO | Specialist: Billing Support Specialist with tools ['Currency Converter', 'Company Data']
+2026-07-30 11:46:41,956 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 11:46:41,965 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:36,437 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 12:09:36,447 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:36,448 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 12:09:36,458 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:36,887 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:36,897 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:36,897 | __main__ | ERROR | Query 1 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:36,897 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 12:09:36,908 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:36,908 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 12:09:36,910 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:36,925 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:37,363 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:37,371 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:37,371 | __main__ | ERROR | Query 2 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:37,371 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 12:09:37,381 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:37,381 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 12:09:37,382 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:37,394 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:37,858 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:37,866 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:37,866 | __main__ | ERROR | Query 3 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:37,866 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 12:09:37,877 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:37,877 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 12:09:37,879 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:37,890 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:38,336 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:38,343 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:38,343 | __main__ | ERROR | Query 4 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:38,343 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 12:09:38,352 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:38,352 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 12:09:38,354 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:38,366 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:38,786 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:38,795 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:38,795 | __main__ | ERROR | Query 5 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:38,795 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 12:09:38,805 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:38,805 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 12:09:38,806 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:38,818 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:39,226 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:39,232 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:39,232 | __main__ | ERROR | Query 6 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:39,232 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 12:09:39,242 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:39,243 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 12:09:39,243 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:39,254 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:39,702 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:39,708 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:39,708 | __main__ | ERROR | Query 7 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:39,708 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 12:09:39,721 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:39,721 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 12:09:39,722 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:39,734 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:40,167 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:40,174 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:40,174 | __main__ | ERROR | Query 8 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:40,174 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 12:09:40,184 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:09:40,184 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 12:09:40,185 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 12:09:40,196 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:09:40,617 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:09:40,626 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:09:40,626 | __main__ | ERROR | Query 9 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:17:30,705 | __main__ | INFO | Starting support triage for: help with invoice
+2026-07-30 12:17:30,715 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:17:30,715 | crews.support_crew | INFO | Query: help with invoice
+2026-07-30 12:17:30,728 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:17:30,993 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:17:30,999 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 12:18:24,463 | __main__ | INFO | Starting support triage for: help with invoice
+2026-07-30 12:18:24,469 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 12:18:24,469 | crews.support_crew | INFO | Query: help with invoice
+2026-07-30 12:18:24,480 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 12:18:24,731 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 12:18:24,738 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:40,055 | __main__ | INFO | Starting support triage for: refund please
+2026-07-30 13:34:40,072 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:40,072 | crews.support_crew | INFO | Query: refund please
+2026-07-30 13:34:40,088 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:40,592 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:40,601 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:57,497 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 13:34:57,508 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:57,508 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 13:34:57,524 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:58,007 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:58,018 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,018 | __main__ | ERROR | Query 1 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,018 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 13:34:58,033 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:58,033 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 13:34:58,036 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:34:58,052 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:58,512 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:58,520 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,520 | __main__ | ERROR | Query 2 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,520 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 13:34:58,533 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:58,533 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 13:34:58,535 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:34:58,548 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:58,991 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:58,997 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,998 | __main__ | ERROR | Query 3 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:58,998 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 13:34:59,008 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:59,008 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 13:34:59,009 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:34:59,022 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:59,492 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:59,499 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:59,499 | __main__ | ERROR | Query 4 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:59,499 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 13:34:59,510 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:34:59,510 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 13:34:59,512 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:34:59,525 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:34:59,980 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:34:59,989 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:59,989 | __main__ | ERROR | Query 5 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:34:59,989 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 13:35:00,006 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:35:00,007 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 13:35:00,008 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:35:00,025 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:35:00,597 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:35:00,608 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:00,609 | __main__ | ERROR | Query 6 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:00,609 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 13:35:00,626 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:35:00,626 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 13:35:00,627 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:35:00,641 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:35:01,108 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:35:01,114 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:01,115 | __main__ | ERROR | Query 7 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:01,115 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 13:35:01,126 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:35:01,126 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 13:35:01,128 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:35:01,138 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:35:01,582 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:35:01,589 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:01,589 | __main__ | ERROR | Query 8 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:01,589 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 13:35:01,599 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:35:01,599 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 13:35:01,600 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:35:01,613 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:35:02,059 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:35:02,065 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:35:02,065 | __main__ | ERROR | Query 9 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:38,925 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 13:46:38,938 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:38,938 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 13:46:38,950 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:39,453 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:39,465 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:39,465 | __main__ | ERROR | Query 1 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:39,465 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 13:46:39,479 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:39,480 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 13:46:39,482 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:39,496 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:39,949 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:39,955 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:39,956 | __main__ | ERROR | Query 2 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:39,956 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 13:46:39,965 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:39,965 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 13:46:39,966 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:39,979 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:40,463 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:40,470 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:40,471 | __main__ | ERROR | Query 3 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:40,471 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 13:46:40,480 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:40,481 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 13:46:40,482 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:40,493 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:40,957 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:40,964 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:40,965 | __main__ | ERROR | Query 4 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:40,965 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 13:46:40,976 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:40,976 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 13:46:40,977 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:40,987 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:41,434 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:41,440 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:41,441 | __main__ | ERROR | Query 5 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:41,441 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 13:46:41,451 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:41,451 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 13:46:41,452 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:41,465 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:41,947 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:41,955 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:41,955 | __main__ | ERROR | Query 6 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:41,955 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 13:46:41,969 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:41,970 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 13:46:41,971 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:41,985 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:42,439 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:42,445 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:42,445 | __main__ | ERROR | Query 7 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:42,445 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 13:46:42,457 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:42,457 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 13:46:42,458 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:42,473 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:42,923 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:42,929 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:42,929 | __main__ | ERROR | Query 8 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:42,929 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 13:46:42,939 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 13:46:42,940 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 13:46:42,941 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 13:46:42,953 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 13:46:43,427 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 13:46:43,434 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 13:46:43,434 | __main__ | ERROR | Query 9 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:09,061 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:00:09,072 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:09,072 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:00:09,088 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:09,583 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:09,597 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:09,597 | __main__ | ERROR | Query 1 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:09,597 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:00:09,612 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:09,613 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:00:09,615 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:09,630 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:10,156 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:10,165 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:10,165 | __main__ | ERROR | Query 2 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:10,166 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:00:10,183 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:10,183 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:00:10,185 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:10,200 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:10,687 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:10,693 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:10,693 | __main__ | ERROR | Query 3 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:10,693 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:00:10,703 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:10,703 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:00:10,704 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:10,718 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:11,221 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:11,228 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:11,228 | __main__ | ERROR | Query 4 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:11,228 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:00:11,238 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:11,238 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:00:11,240 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:11,253 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:11,750 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:11,756 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:11,756 | __main__ | ERROR | Query 5 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:11,756 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:00:11,766 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:11,766 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:00:11,767 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:11,779 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:12,217 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:12,223 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:12,223 | __main__ | ERROR | Query 6 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:12,223 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:00:12,233 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:12,233 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:00:12,234 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:12,246 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:12,754 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:12,760 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:12,760 | __main__ | ERROR | Query 7 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:12,760 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:00:12,772 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:12,772 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:00:12,773 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:12,784 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:13,252 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:13,259 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:13,259 | __main__ | ERROR | Query 8 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:13,259 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:00:13,268 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:00:13,269 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:00:13,270 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:00:13,281 | LiteLLM | INFO | 
+LiteLLM completion() model= llama3.2:3b; provider = ollama
+2026-07-30 14:00:13,738 | httpx | INFO | HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 500 Internal Server Error"
+2026-07-30 14:00:13,744 | root | ERROR | LiteLLM call failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:00:13,744 | __main__ | ERROR | Query 9 failed: litellm.APIConnectionError: OllamaException - {"error":"error starting llama-server: llama-server binary not found (checked: /usr/local/lib/ollama/llama-server, /usr/local/bin/build/lib/ollama/llama-server, /usr/local/bin/dist/linux-amd64/lib/ollama/llama-server, /usr/local/bin/dist/linux_amd64/lib/ollama/llama-server, /build/lib/ollama/llama-server, /dist/linux-amd64/lib/ollama/llama-server, /dist/linux_amd64/lib/ollama/llama-server). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-07-30 14:05:52,092 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:05:52,098 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,105 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,106 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,106 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:05:52,109 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,121 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,123 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,134 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2c03cb0>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,135 | __main__ | ERROR | Query 1 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2c03cb0>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,135 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:05:52,140 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,148 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,150 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,150 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:05:52,152 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,153 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,160 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,161 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,164 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2ae88f0>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,165 | __main__ | ERROR | Query 2 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2ae88f0>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,165 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:05:52,169 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,178 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,179 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,179 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:05:52,180 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,181 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,186 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,187 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,191 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb07aef60>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,191 | __main__ | ERROR | Query 3 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb07aef60>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,191 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:05:52,195 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,202 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,202 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,203 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:05:52,204 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,204 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,211 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,212 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,215 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb07afb30>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,216 | __main__ | ERROR | Query 4 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb07afb30>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,216 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:05:52,219 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,226 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,227 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,227 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:05:52,228 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,229 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,235 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,235 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,239 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2d13e60>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,239 | __main__ | ERROR | Query 5 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2d13e60>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,239 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:05:52,243 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,251 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,252 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,252 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:05:52,254 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,256 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,263 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,264 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,267 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2b33020>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,267 | __main__ | ERROR | Query 6 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2b33020>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,267 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:05:52,272 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,280 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,281 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,281 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:05:52,283 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,283 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,288 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,289 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,292 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2aea210>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,292 | __main__ | ERROR | Query 7 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2aea210>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,292 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:05:52,295 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,304 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,306 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,306 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:05:52,307 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,308 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,314 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,315 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,319 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb060b980>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,319 | __main__ | ERROR | Query 8 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb060b980>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,319 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:05:52,323 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,329 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,330 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:05:52,330 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:05:52,332 | opentelemetry.trace | WARNING | Overriding of current TracerProvider is not allowed
+2026-07-30 14:05:52,333 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,338 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,339 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:05:52,343 | root | ERROR | LiteLLM call failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2c77d70>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:05:52,343 | __main__ | ERROR | Query 9 failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=<tools.demo_llm.DemoLLM object at 0x721fb2c77d70>
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2026-07-30 14:08:19,425 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:08:19,433 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:08:19,439 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:08:19,440 | crews.support_crew | INFO | === Support Triage Start ===
+2026-07-30 14:08:19,440 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:08:19,442 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:08:19,447 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:08:19,448 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:50,974 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:09:50,981 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:50,987 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:50,988 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:50,988 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:09:50,990 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:09:50,990 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:50,990 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:09:50,995 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,004 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,004 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,005 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:09:51,005 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:09:51,005 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:09:51,009 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,016 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,017 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,017 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:09:51,017 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:09:51,017 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,018 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:09:51,023 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,030 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,032 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,032 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:09:51,032 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:09:51,032 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,032 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:09:51,038 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,044 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,045 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,045 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:09:51,045 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:09:51,045 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,045 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:09:51,051 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,059 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,060 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,060 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:09:51,060 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:09:51,060 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,060 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:09:51,065 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,071 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,072 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,072 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:09:51,072 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:09:51,072 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,072 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:09:51,075 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,082 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,083 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,083 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:09:51,083 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:09:51,083 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:09:51,083 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:09:51,087 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,093 | root | ERROR | Failed to get supported params: argument of type 'NoneType' is not iterable
+2026-07-30 14:09:51,094 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:09:51,094 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:09:51,095 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:11:04,710 | __main__ | INFO | Starting support triage for: I was charged twice
+2026-07-30 14:11:04,722 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:11:04,723 | crews.support_crew | INFO | Query: I was charged twice
+2026-07-30 14:11:04,724 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:11:04,724 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,707 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:13:16,718 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,718 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:13:16,720 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:13:16,720 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,720 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:13:16,730 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,730 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:13:16,730 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:13:16,730 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,730 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:13:16,740 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,740 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:13:16,740 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:13:16,740 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,740 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:13:16,749 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,750 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:13:16,750 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:13:16,750 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,750 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:13:16,759 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,759 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:13:16,759 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:13:16,760 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,760 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:13:16,769 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,769 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:13:16,769 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:13:16,769 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,769 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:13:16,779 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,779 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:13:16,779 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:13:16,779 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,779 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:13:16,788 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,788 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:13:16,788 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:13:16,789 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:13:16,789 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:13:16,798 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:13:16,798 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:13:16,798 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:23:22,351 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:23:22,363 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,363 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:23:22,364 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:23:22,364 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,364 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:23:22,373 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,374 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:23:22,374 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:22,374 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,374 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:23:22,383 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,383 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:23:22,383 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:22,384 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,384 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:23:22,393 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,393 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:23:22,394 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:22,394 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,394 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:23:22,403 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,403 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:23:22,403 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:22,403 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,403 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:23:22,413 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,413 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:23:22,413 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:23:22,414 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,414 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:23:22,424 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,424 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:23:22,424 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:22,424 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,424 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:23:22,437 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,437 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:23:22,438 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:22,438 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:22,438 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:23:22,452 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:22,452 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:23:22,452 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:23:26,385 | __main__ | INFO | Starting support triage for: reset my password
+2026-07-30 14:23:26,397 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:26,397 | crews.support_crew | INFO | Query: reset my password
+2026-07-30 14:23:26,398 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:26,398 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,555 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:23:51,567 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,567 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:23:51,569 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:23:51,569 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,569 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:23:51,579 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,579 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:23:51,579 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:51,579 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,580 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:23:51,589 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,589 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:23:51,589 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:51,589 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,590 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:23:51,599 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,599 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:23:51,600 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:51,600 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,600 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:23:51,609 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,609 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:23:51,609 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:51,610 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,610 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:23:51,619 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,619 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:23:51,619 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:23:51,620 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,620 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:23:51,629 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,629 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:23:51,629 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:23:51,629 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,629 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:23:51,639 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,639 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:23:51,639 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:23:51,639 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:23:51,639 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:23:51,650 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:23:51,650 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:23:51,650 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:24:12,286 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:24:12,299 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,299 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:24:12,300 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:24:12,300 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,300 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:24:12,310 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,310 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:24:12,310 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:24:12,310 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,310 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:24:12,319 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,320 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:24:12,320 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:24:12,320 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,320 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:24:12,330 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,330 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:24:12,330 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:24:12,330 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,330 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:24:12,339 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,340 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:24:12,340 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:24:12,340 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,340 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:24:12,350 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,350 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:24:12,350 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:24:12,350 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,350 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:24:12,360 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,360 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:24:12,360 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:24:12,360 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,360 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:24:12,370 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,370 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:24:12,371 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:24:12,371 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:24:12,371 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:24:12,380 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:12,380 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:24:12,381 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:24:16,722 | __main__ | INFO | Starting support triage for: help
+2026-07-30 14:24:16,740 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:24:16,740 | crews.support_crew | INFO | Query: help
+2026-07-30 14:24:16,742 | crews.support_crew | INFO | Classification (demo): escalate
+2026-07-30 14:25:24,373 | __main__ | INFO | Starting support triage for: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:25:24,391 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,392 | crews.support_crew | INFO | Query: I was charged twice for my subscription this month. Can you help?
+2026-07-30 14:25:24,393 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:25:24,393 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,394 | __main__ | INFO | Starting support triage for: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:25:24,406 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,407 | crews.support_crew | INFO | Query: I can't log into my account. It says 'invalid credentials'.
+2026-07-30 14:25:24,407 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:25:24,407 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,407 | __main__ | INFO | Starting support triage for: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:25:24,417 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,417 | crews.support_crew | INFO | Query: What are the differences between your Pro and Enterprise plans?
+2026-07-30 14:25:24,417 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:25:24,417 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,417 | __main__ | INFO | Starting support triage for: How do I reset my password? I keep getting an error.
+2026-07-30 14:25:24,426 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,426 | crews.support_crew | INFO | Query: How do I reset my password? I keep getting an error.
+2026-07-30 14:25:24,426 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:25:24,426 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,427 | __main__ | INFO | Starting support triage for: Do you offer student discounts on the basic plan?
+2026-07-30 14:25:24,436 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,436 | crews.support_crew | INFO | Query: Do you offer student discounts on the basic plan?
+2026-07-30 14:25:24,436 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:25:24,436 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,436 | __main__ | INFO | Starting support triage for: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:25:24,446 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,446 | crews.support_crew | INFO | Query: My invoice #1243 shows the wrong amount. Please fix it.
+2026-07-30 14:25:24,446 | crews.support_crew | INFO | Classification (demo): billing
+2026-07-30 14:25:24,446 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,446 | __main__ | INFO | Starting support triage for: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:25:24,456 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,456 | crews.support_crew | INFO | Query: The dashboard widget keeps showing a loading spinner and never loads.
+2026-07-30 14:25:24,456 | crews.support_crew | INFO | Classification (demo): technical
+2026-07-30 14:25:24,456 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,456 | __main__ | INFO | Starting support triage for: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:25:24,465 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,465 | crews.support_crew | INFO | Query: I want to upgrade from Basic to Pro. What happens to my existing data?
+2026-07-30 14:25:24,466 | crews.support_crew | INFO | Classification (demo): sales
+2026-07-30 14:25:24,466 | crews.support_crew | INFO | === Support Triage Demo End ===
+2026-07-30 14:25:24,466 | __main__ | INFO | Starting support triage for: Can I speak to a human? This is urgent.
+2026-07-30 14:25:24,475 | crews.support_crew | INFO | === Support Triage Demo Start ===
+2026-07-30 14:25:24,475 | crews.support_crew | INFO | Query: Can I speak to a human? This is urgent.
+2026-07-30 14:25:24,475 | crews.support_crew | INFO | Classification (demo): escalate
