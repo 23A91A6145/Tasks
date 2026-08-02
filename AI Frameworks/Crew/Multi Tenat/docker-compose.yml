@@ -1,0 +1,105 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tenantdesk
+      POSTGRES_PASSWORD: tenantdesk
+      POSTGRES_DB: tenantdesk
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tenantdesk"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build: ./apps/backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg2://tenantdesk:tenantdesk@db:5432/tenantdesk
+      SECRET_KEY: change-me-in-production
+      BACKEND_CORS_ORIGINS: '["http://localhost:3000"]'
+      FRONTEND_URL: http://localhost:3000
+      STORAGE_DIR: /data/storage
+      # 0 = leave jobs queued for the worker service (JOBS_INLINE=1 runs inline)
+      JOBS_INLINE: "0"
+      AI_ENGINE: ${AI_ENGINE:-auto}
+      LLM_PROVIDER: ${LLM_PROVIDER:-openai}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4o-mini}
+      EMBEDDINGS_PROVIDER: ${EMBEDDINGS_PROVIDER:-hash}
+      EMBEDDINGS_MODEL: ${EMBEDDINGS_MODEL:-text-embedding-3-small}
+      EMBEDDINGS_BASE_URL: ${EMBEDDINGS_BASE_URL:-}
+      EMBEDDINGS_API_KEY: ${EMBEDDINGS_API_KEY:-}
+      VECTOR_STORE: ${VECTOR_STORE:-numpy}
+      QDRANT_URL: ${QDRANT_URL:-}
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - storage:/data
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Async job worker (started by default with the rest of the stack so jobs
+  # created via the API are never left queued). DB-backed + checkpointed.
+  worker:
+    build: ./apps/backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg2://tenantdesk:tenantdesk@db:5432/tenantdesk
+      SECRET_KEY: change-me-in-production
+      STORAGE_DIR: /data/storage
+      JOBS_INLINE: "0"
+      AI_ENGINE: ${AI_ENGINE:-auto}
+      LLM_PROVIDER: ${LLM_PROVIDER:-openai}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4o-mini}
+      EMBEDDINGS_PROVIDER: ${EMBEDDINGS_PROVIDER:-hash}
+      EMBEDDINGS_MODEL: ${EMBEDDINGS_MODEL:-text-embedding-3-small}
+      EMBEDDINGS_BASE_URL: ${EMBEDDINGS_BASE_URL:-}
+      EMBEDDINGS_API_KEY: ${EMBEDDINGS_API_KEY:-}
+      VECTOR_STORE: ${VECTOR_STORE:-numpy}
+      QDRANT_URL: ${QDRANT_URL:-}
+    command: python -m scripts.worker
+    volumes:
+      - storage:/data
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Optional vector store. Enable by uncommenting (free tier: use QDRANT_QDRANT=1
+  # once you add the qdrant Docker image; the app also works with built-in
+  # offline hash embeddings — see docs/).
+  # qdrant:
+  #   image: qdrant/qdrant:latest
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6333:6333"
+  #   volumes:
+  #     - qdrant_data:/qdrant/storage
+
+  frontend:
+    build:
+      context: ./apps/frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  storage:
+  # qdrant_data:

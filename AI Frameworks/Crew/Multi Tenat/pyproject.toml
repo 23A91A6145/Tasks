@@ -1,0 +1,28 @@
+[project]
+name = "tenantdesk-ai"
+version = "5.0.0"
+description = "TenantDesk AI — multi-tenant AI support platform (Volumes 1-5 capstone)"
+requires-python = ">=3.12"
+authors = [{ name = "TenantDesk Team" }]
+
+# Monorepo root manifest.
+# Per-app dependencies live in:
+#   apps/backend/pyproject.toml + requirements*.txt   (FastAPI backend)
+#   apps/frontend/package.json                          (Next.js frontend)
+#
+# Root packages (agents, knowledge, flows, services, workers, database, mcp, tools)
+# are thin bridges that import the real implementation under apps/backend/app.
+# Run them with a Python that has the backend dependencies installed, e.g.:
+#   apps/backend/.venv/bin/python -c "import agents, flows, workers, database"
+
+[tool.setuptools]
+packages = [
+    "agents",
+    "database",
+    "flows",
+    "knowledge",
+    "mcp",
+    "services",
+    "tools",
+    "workers",
+]
