@@ -1,22 +1,33 @@
-import sys
-from pathlib import Path
+"""AI engine facade — pick and run the best engine for ticket handling."""
 
-# Bridge to apps/backend/app/agents
-backend_dir = Path(__file__).resolve().parent.parent / "apps" / "backend"
-if str(backend_dir) not in sys.path:
-    sys.path.insert(0, str(backend_dir))
+from sqlalchemy.orm import Session
 
-from app.agents import (
-    handle_ticket,
-)
-from app.agents.engine import HandleResult, resolve_engine_name
-from app.agents import crew_support, direct_engine, fallback_engine
+from ..models import Organization
+from .engine import HandleResult, resolve_engine_name
 
-__all__ = [
-    "handle_ticket",
-    "HandleResult",
-    "resolve_engine_name",
-    "crew_support",
-    "direct_engine",
-    "fallback_engine",
-]
+
+def handle_ticket(
+    db: Session,
+    organization: Organization,
+    subject: str,
+    body: str,
+    top_k: int = 4,
+) -> HandleResult:
+    engine = resolve_engine_name()
+
+    if engine == "crewai":
+        from . import crew_support
+
+        result = crew_support.handle_ticket(db, organization, subject, body, top_k=top_k)
+    elif engine == "llm":
+        from . import direct_engine
+
+        result = direct_engine.handle_ticket(db, organization, subject, body, top_k=top_k)
+    else:
+        from . import fallback_engine
+
+        result = fallback_engine.handle_ticket(db, organization, subject, body, top_k=top_k)
+        if result.engine == "fallback" and result.notes is None:
+            result.notes = ""
+
+    return result
