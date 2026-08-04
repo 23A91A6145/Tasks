@@ -1,0 +1,6 @@
+# Dependencies for Persistent-Memory Chat CLI
+# Microsoft Agent Framework & Rich CLI Suite
+
+python-dotenv>=1.0.0
+rich>=13.0.0
+pytest>=8.0.0

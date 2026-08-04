@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  persistent-chat-cli:
+    build: .
+    container_name: persistent_chat_cli
+    stdin_open: true
+    tty: true
+    environment:
+      - LLM_PROVIDER=mock
+      - HISTORY_DIR=/app/history
+      - LOGS_DIR=/app/logs
+    volumes:
+      - ./history:/app/history
+      - ./logs:/app/logs

@@ -1,0 +1,25 @@
+{
+  "demo_portfolio_session": {
+    "id": "demo_portfolio_session",
+    "title": "My name is Alice and I am a Le...",
+    "created_at": "2026-08-04T18:21:20",
+    "facts": {
+      "name": "Alice",
+      "role": "Lead AI Engineer"
+    },
+    "summary": "",
+    "updated_at": "2026-08-04T18:22:01",
+    "message_count": 8
+  },
+  "session_001": {
+    "id": "session_001",
+    "title": "Latest news on AI Agentic deve...",
+    "created_at": "2026-08-04T18:22:49",
+    "facts": {
+      "name": "charan"
+    },
+    "summary": "Past Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n[ASSISTANT]: Welcome back! This session has 2 past user turns loaded in p...\n[USER]: hello, I am charan.\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n[ASSISTANT]: Welcome back! This session has 2 past user turns loaded in p...\n[USER]: hello, I am charan.\n[ASSISTANT]: Welcome back! This session has 3 past user turns loaded in p...\n[USER]: what is my name\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n[ASSISTANT]: Welcome back! This session has 2 past user turns loaded in p...\n[USER]: hello, I am charan.\n[ASSISTANT]: Welcome back! This session has 3 past user turns loaded in p...\n[USER]: what is my name\n[ASSISTANT]: I remember our persistent session thread, but I haven't reco...\n[USER]: waht is persistent session thread\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n[ASSISTANT]: Welcome back! This session has 2 past user turns loaded in p...\n[USER]: hello, I am charan.\n[ASSISTANT]: Welcome back! This session has 3 past user turns loaded in p...\n[USER]: what is my name\n[ASSISTANT]: I remember our persistent session thread, but I haven't reco...\n[USER]: waht is persistent session thread\n[ASSISTANT]: I have received your message: 'waht is persistent session th...\n[USER]: what's the status.\n\nPast Conversation Summary:\n[USER]: Latest news on AI Agentic developments.\n[ASSISTANT]: I have received your message: 'Latest news on AI Agentic dev...\n[USER]: hello\n[ASSISTANT]: Welcome back! This session has 2 past user turns loaded in p...\n[USER]: hello, I am charan.\n[ASSISTANT]: Welcome back! This session has 3 past user turns loaded in p...\n[USER]: what is my name\n[ASSISTANT]: I remember our persistent session thread, but I haven't reco...\n[USER]: waht is persistent session thread\n[ASSISTANT]: I have received your message: 'waht is persistent session th...\n[USER]: what's the status.\n[ASSISTANT]: I have received your message: 'what's the status.'.\n\nℹ️ *(Vo...\n[USER]: My name is charan, I am lead AI engineer.",
+    "updated_at": "2026-08-04T18:42:10",
+    "message_count": 34
+  }
+}
