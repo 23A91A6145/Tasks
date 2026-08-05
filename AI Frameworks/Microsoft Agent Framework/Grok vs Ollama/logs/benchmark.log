@@ -1,0 +1,407 @@
+[2026-08-05 15:20:51] INFO [benchmark:86] - No prompts dataset found or files are empty. Generating default suite.
+[2026-08-05 15:20:51] INFO [benchmark:97] - Saved default prompt suite to datasets directory.
+[2026-08-05 15:20:51] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:20:51] INFO [agent:152] - Agent finished run successfully. Latency: 0.15s, TPS: 196.41
+[2026-08-05 15:20:51] INFO [benchmark:131] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:20:51] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:20:51] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:20:51] ERROR [agent:158] - Agent failed execution: 'dict' object has no attribute 'content'
+[2026-08-05 15:20:51] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:20:51] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:20:51] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:20:51] ERROR [agent:158] - Agent failed execution: 'dict' object has no attribute 'content'
+[2026-08-05 15:20:51] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:20:51] INFO [benchmark:241] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:20:51] INFO [benchmark:248] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:20:52] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:20:52] INFO [reports:164] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:21:19] INFO [benchmark:68] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:21:19] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:21:19] INFO [agent:161] - Agent finished run successfully. Latency: 0.40s, TPS: 75.38
+[2026-08-05 15:21:19] INFO [benchmark:131] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:21:19] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:21:19] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:21:19] INFO [agent:161] - Agent finished run successfully. Latency: 0.46s, TPS: 65.51
+[2026-08-05 15:21:19] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:21:19] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:21:19] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:21:20] INFO [agent:161] - Agent finished run successfully. Latency: 0.78s, TPS: 99.83
+[2026-08-05 15:21:20] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:21:20] INFO [benchmark:241] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:21:20] INFO [benchmark:248] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:21:21] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:21:21] INFO [reports:164] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [benchmark:68] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [benchmark:131] - Warm-up run completed successfully for llama-3.3-70b-versatile.
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Reasoning, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Summarization, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Tool Calling, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Translation, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:15] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [providers:130] - Ollama API call failed: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [benchmark:131] - Warm-up run completed successfully for llama3.2:1b.
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Reasoning, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Summarization, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Tool Calling, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:160] - Running Benchmark: Category=Translation, Run=1/1
+[2026-08-05 15:27:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:1b')
+[2026-08-05 15:27:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+[2026-08-05 15:27:15] ERROR [agent:167] - Agent failed execution: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-08-05 15:27:15] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:15] INFO [benchmark:241] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:27:15] INFO [benchmark:248] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:27:16] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:27:16] INFO [reports:164] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:27:58] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:27:58] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:27:58] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:27:58] INFO [benchmark:68] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:27:58] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:27:58] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:58] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:58] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:58] INFO [benchmark:131] - Warm-up run completed successfully for llama-3.3-70b-versatile.
+[2026-08-05 15:27:58] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [benchmark:160] - Running Benchmark: Category=Reasoning, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [benchmark:160] - Running Benchmark: Category=Summarization, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [benchmark:160] - Running Benchmark: Category=Tool Calling, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [benchmark:160] - Running Benchmark: Category=Translation, Run=1/1
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:27:59] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] ERROR [agent:167] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:27:59] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:27:59] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:27:59] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:27:59] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:28:07] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:28:07] INFO [agent:161] - Agent finished run successfully. Latency: 7.97s, TPS: 3.13
+[2026-08-05 15:28:07] INFO [benchmark:131] - Warm-up run completed successfully for llama3.2:3b.
+[2026-08-05 15:28:07] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:28:07] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:28:07] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:28:26] INFO [agent:161] - Agent finished run successfully. Latency: 19.24s, TPS: 13.30
+[2026-08-05 15:28:26] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:28:26] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:28:26] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:28:27] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:28:54] INFO [agent:161] - Agent finished run successfully. Latency: 28.42s, TPS: 10.70
+[2026-08-05 15:28:54] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:28:54] INFO [benchmark:160] - Running Benchmark: Category=Reasoning, Run=1/1
+[2026-08-05 15:28:54] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:28:56] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:29:12] INFO [agent:161] - Agent finished run successfully. Latency: 17.52s, TPS: 10.56
+[2026-08-05 15:29:12] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:29:12] INFO [benchmark:160] - Running Benchmark: Category=Summarization, Run=1/1
+[2026-08-05 15:29:12] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:29:15] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:29:21] INFO [agent:161] - Agent finished run successfully. Latency: 8.80s, TPS: 7.73
+[2026-08-05 15:29:21] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:29:21] INFO [benchmark:160] - Running Benchmark: Category=Tool Calling, Run=1/1
+[2026-08-05 15:29:21] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:29:22] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:29:28] INFO [agent:161] - Agent finished run successfully. Latency: 7.52s, TPS: 9.97
+[2026-08-05 15:29:28] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:29:28] INFO [benchmark:160] - Running Benchmark: Category=Translation, Run=1/1
+[2026-08-05 15:29:28] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:29:29] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:29:41] INFO [agent:161] - Agent finished run successfully. Latency: 12.45s, TPS: 10.69
+[2026-08-05 15:29:41] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:29:41] INFO [benchmark:241] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:29:41] INFO [benchmark:248] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:29:41] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:29:41] INFO [reports:164] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:36:22] INFO [benchmark:68] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:36:22] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:36:23] INFO [agent:167] - Agent finished run successfully. Latency: 0.23s, TPS: 131.47, RAM Used: 5.33 GB (Delta: 0.01 GB)
+[2026-08-05 15:36:23] INFO [benchmark:131] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:36:23] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:36:23] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:36:23] INFO [agent:167] - Agent finished run successfully. Latency: 0.36s, TPS: 83.45, RAM Used: 5.32 GB (Delta: 0.0 GB)
+[2026-08-05 15:36:23] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:36:23] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:36:23] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:36:24] INFO [agent:167] - Agent finished run successfully. Latency: 0.72s, TPS: 108.08, RAM Used: 5.33 GB (Delta: 0.01 GB)
+[2026-08-05 15:36:24] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:36:24] INFO [benchmark:245] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:36:24] INFO [benchmark:252] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:36:24] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:36:25] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:37:38] INFO [benchmark:68] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:37:38] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:37:38] INFO [agent:167] - Agent finished run successfully. Latency: 0.16s, TPS: 192.77, RAM Used: 5.36 GB (Delta: 0.01 GB)
+[2026-08-05 15:37:38] INFO [benchmark:131] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:37:38] INFO [benchmark:160] - Running Benchmark: Category=General QA, Run=1/1
+[2026-08-05 15:37:38] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:37:38] INFO [agent:167] - Agent finished run successfully. Latency: 0.44s, TPS: 68.05, RAM Used: 5.36 GB (Delta: 0.0 GB)
+[2026-08-05 15:37:38] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:37:38] INFO [benchmark:160] - Running Benchmark: Category=Coding, Run=1/1
+[2026-08-05 15:37:38] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:37:39] INFO [agent:167] - Agent finished run successfully. Latency: 0.72s, TPS: 109.09, RAM Used: 5.36 GB (Delta: 0.0 GB)
+[2026-08-05 15:37:39] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:37:39] INFO [benchmark:245] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:37:39] INFO [benchmark:252] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:37:40] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:37:40] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:39:44] INFO [benchmark:70] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:39:44] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:39:45] INFO [agent:179] - Agent finished run successfully. Latency: 0.39s, TPS: 76.30, RAM Used: 5.33 GB (Delta: 0.0 GB)
+[2026-08-05 15:39:45] INFO [benchmark:133] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:39:45] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:39:45] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:39:45] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:39:45] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:39:45] INFO [agent:179] - Agent finished run successfully. Latency: 0.46s, TPS: 65.37, RAM Used: 5.34 GB (Delta: 0.01 GB)
+[2026-08-05 15:39:45] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:39:45] INFO [agent:179] - Agent finished run successfully. Latency: 0.71s, TPS: 109.71, RAM Used: 5.34 GB (Delta: 0.01 GB)
+[2026-08-05 15:39:45] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:39:45] INFO [benchmark:278] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:39:45] INFO [benchmark:285] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:39:46] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:39:46] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:42:06] INFO [benchmark:70] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:42:06] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:42:07] INFO [agent:179] - Agent finished run successfully. Latency: 0.30s, TPS: 101.68, RAM Used: 5.35 GB (Delta: 0.0 GB)
+[2026-08-05 15:42:07] INFO [benchmark:133] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:42:07] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:42:07] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:42:07] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:42:07] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:42:07] INFO [agent:179] - Agent finished run successfully. Latency: 0.46s, TPS: 65.19, RAM Used: 5.36 GB (Delta: 0.0 GB)
+[2026-08-05 15:42:07] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:42:08] INFO [agent:179] - Agent finished run successfully. Latency: 0.72s, TPS: 108.16, RAM Used: 5.36 GB (Delta: 0.0 GB)
+[2026-08-05 15:42:08] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:42:08] INFO [benchmark:278] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:42:08] INFO [benchmark:285] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:42:08] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:42:08] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:43:44] INFO [benchmark:70] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:43:44] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:43:44] INFO [agent:179] - Agent finished run successfully. Latency: 0.20s, TPS: 149.11, RAM Used: 5.3 GB (Delta: 0.01 GB)
+[2026-08-05 15:43:44] INFO [benchmark:133] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:43:44] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:43:44] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:43:44] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:43:44] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:43:44] INFO [agent:179] - Agent finished run successfully. Latency: 0.43s, TPS: 70.36, RAM Used: 5.3 GB (Delta: 0.0 GB)
+[2026-08-05 15:43:44] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:43:45] INFO [agent:179] - Agent finished run successfully. Latency: 0.73s, TPS: 106.53, RAM Used: 5.3 GB (Delta: 0.0 GB)
+[2026-08-05 15:43:45] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:43:45] INFO [benchmark:278] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:43:45] INFO [benchmark:285] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:43:45] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:43:45] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:46:23] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:46:23] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:46:23] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:46:50] INFO [benchmark:70] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:46:50] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:46:50] INFO [agent:179] - Agent finished run successfully. Latency: 0.18s, TPS: 162.62, RAM Used: 5.22 GB (Delta: 0.0 GB)
+[2026-08-05 15:46:50] INFO [benchmark:133] - Warm-up run completed successfully for mock-dry-run-model.
+[2026-08-05 15:46:50] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:46:50] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:46:50] INFO [benchmark:171] - Running Benchmark task: Provider=MockProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:46:50] INFO [agent:31] - Agent executing prompt with client 'MockProviderClient' (Model: 'mock-dry-run-model')
+[2026-08-05 15:46:50] INFO [agent:179] - Agent finished run successfully. Latency: 0.42s, TPS: 70.92, RAM Used: 5.22 GB (Delta: 0.0 GB)
+[2026-08-05 15:46:50] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:46:51] INFO [agent:179] - Agent finished run successfully. Latency: 0.72s, TPS: 108.47, RAM Used: 5.22 GB (Delta: 0.0 GB)
+[2026-08-05 15:46:51] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:46:51] INFO [benchmark:278] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:46:51] INFO [benchmark:285] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:46:51] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:46:51] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.
+[2026-08-05 15:47:46] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:47:46] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:47:46] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:47:46] INFO [benchmark:70] - Loaded 6 prompts from CSV: /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/datasets/prompts.csv
+[2026-08-05 15:47:46] INFO [httpx:1025] - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-08-05 15:47:46] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:46] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:46] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:48] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:48] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:51] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] INFO [benchmark:133] - Warm-up run completed successfully for llama-3.3-70b-versatile.
+[2026-08-05 15:47:51] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:47:51] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:47:51] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:51] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:51] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=Reasoning, Run=1/1
+[2026-08-05 15:47:51] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:51] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=Summarization, Run=1/1
+[2026-08-05 15:47:51] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:51] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:51] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:51] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:51] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:51] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:52] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:52] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:52] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:52] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:52] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:52] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:52] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:52] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:47:55] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=Tool Calling, Run=1/1
+[2026-08-05 15:47:55] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:47:55] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:55] INFO [benchmark:171] - Running Benchmark task: Provider=GroqProviderClient, Category=Translation, Run=1/1
+[2026-08-05 15:47:55] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:47:55] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] INFO [agent:31] - Agent executing prompt with client 'GroqProviderClient' (Model: 'llama-3.3-70b-versatile')
+[2026-08-05 15:47:55] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:55] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:47:55] WARNING [agent:57] - Connection/API error (Attempt 1/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 1.5s...
+[2026-08-05 15:47:57] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:57] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:47:57] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:47:57] WARNING [agent:57] - Connection/API error (Attempt 2/3): Completions.create() got an unexpected keyword argument 'stream_options'. Retrying in 3.0s...
+[2026-08-05 15:48:00] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:48:00] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:48:00] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:48:00] ERROR [providers:66] - Groq API call failed: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:48:00] ERROR [agent:186] - Agent failed execution: Completions.create() got an unexpected keyword argument 'stream_options'
+[2026-08-05 15:48:00] INFO [evaluator:17] - Evaluation: error present. Quality Score: 1.0
+[2026-08-05 15:48:00] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/ "HTTP/1.1 200 OK"
+[2026-08-05 15:48:00] INFO [httpx:1025] - HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+[2026-08-05 15:48:00] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:48:06] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:48:06] INFO [agent:179] - Agent finished run successfully. Latency: 6.39s, TPS: 3.91, RAM Used: 7.71 GB (Delta: 2.4 GB)
+[2026-08-05 15:48:06] INFO [benchmark:133] - Warm-up run completed successfully for llama3.2:3b.
+[2026-08-05 15:48:06] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=General QA, Run=1/1
+[2026-08-05 15:48:06] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:48:07] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:48:26] INFO [agent:179] - Agent finished run successfully. Latency: 19.63s, TPS: 13.19, RAM Used: 7.72 GB (Delta: 0.01 GB)
+[2026-08-05 15:48:26] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:48:27] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=Coding, Run=1/1
+[2026-08-05 15:48:27] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:48:28] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:48:55] INFO [agent:179] - Agent finished run successfully. Latency: 27.90s, TPS: 11.08, RAM Used: 7.78 GB (Delta: 0.05 GB)
+[2026-08-05 15:48:55] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:48:56] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=Reasoning, Run=1/1
+[2026-08-05 15:48:56] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:48:57] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:49:14] INFO [agent:179] - Agent finished run successfully. Latency: 18.23s, TPS: 10.59, RAM Used: 7.81 GB (Delta: 0.03 GB)
+[2026-08-05 15:49:14] INFO [evaluator:77] - Reasoning Evaluation: No numbered steps (e.g. 1. 2. 3.) found.
+[2026-08-05 15:49:14] INFO [evaluator:104] - Evaluation complete. Score: 8.0
+[2026-08-05 15:49:15] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=Summarization, Run=1/1
+[2026-08-05 15:49:15] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:49:18] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:49:23] INFO [agent:179] - Agent finished run successfully. Latency: 8.39s, TPS: 8.10, RAM Used: 7.86 GB (Delta: 0.02 GB)
+[2026-08-05 15:49:24] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:49:25] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=Tool Calling, Run=1/1
+[2026-08-05 15:49:25] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:49:26] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:49:32] INFO [agent:179] - Agent finished run successfully. Latency: 7.52s, TPS: 9.98, RAM Used: 7.82 GB (Delta: 0.0 GB)
+[2026-08-05 15:49:32] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:49:33] INFO [benchmark:171] - Running Benchmark task: Provider=OllamaProviderClient, Category=Translation, Run=1/1
+[2026-08-05 15:49:33] INFO [agent:31] - Agent executing prompt with client 'OllamaProviderClient' (Model: 'llama3.2:3b')
+[2026-08-05 15:49:34] INFO [httpx:1025] - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+[2026-08-05 15:49:51] INFO [agent:179] - Agent finished run successfully. Latency: 17.92s, TPS: 10.05, RAM Used: 7.82 GB (Delta: 0.01 GB)
+[2026-08-05 15:49:51] INFO [evaluator:104] - Evaluation complete. Score: 10.0
+[2026-08-05 15:49:52] INFO [benchmark:278] - Successfully saved benchmark JSON results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.json
+[2026-08-05 15:49:52] INFO [benchmark:285] - Successfully saved benchmark CSV results to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/benchmark.csv
+[2026-08-05 15:49:53] INFO [reports:88] - Matplotlib charts successfully rendered and saved.
+[2026-08-05 15:49:53] INFO [reports:168] - Markdown report scorecard generated and saved to /home/cherry/Desktop/1_Gen/Tasks/MAF/Gork vs Ollama/results/reports/summary_report.md.

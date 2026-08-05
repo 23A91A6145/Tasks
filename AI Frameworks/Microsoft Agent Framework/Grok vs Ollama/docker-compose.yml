@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  benchmark-suite:
+    build: .
+    container_name: maf_benchmark_suite
+    env_file:
+      - .env
+    volumes:
+      - ./results:/app/results
+      - ./logs:/app/logs
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: python main.py --mode dry-run

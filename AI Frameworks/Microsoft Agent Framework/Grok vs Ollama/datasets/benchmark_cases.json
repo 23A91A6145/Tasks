@@ -1,0 +1,26 @@
+[
+  {
+    "category": "General QA",
+    "prompt": "Explain the concept of quantum computing superposition in simple terms for a high school student."
+  },
+  {
+    "category": "Coding",
+    "prompt": "Write a Python function called 'is_prime' that checks if a number is prime and returns a boolean. Include comments."
+  },
+  {
+    "category": "Reasoning",
+    "prompt": "If a shirt is wet and dries in 1 hour in the sun, how long does it take for 5 shirts to dry in the sun? Explain your logic step-by-step."
+  },
+  {
+    "category": "Summarization",
+    "prompt": "Summarize the following passage in less than 3 sentences: 'The Model Context Protocol (MCP) is an open-standard protocol designed to establish secure, uniform communication between AI clients and local or remote data sources. By formalizing tool capabilities, data routing, and session handshakes, it eliminates developer-side custom integrations, allowing agents to query databases, file systems, and API nodes out of the box. Key advantages include client-agnostic reuse and deep security sandboxing.'"
+  },
+  {
+    "category": "Tool Calling",
+    "prompt": "Generate a JSON payload representation of a tool call named 'get_weather' targeting location 'Tokyo, Japan' with unit 'celsius'."
+  },
+  {
+    "category": "Translation",
+    "prompt": "Translate the following statement into formal French: 'AI provider abstraction layers prevent developer lock-in and enable seamless client swapping.'"
+  }
+]
