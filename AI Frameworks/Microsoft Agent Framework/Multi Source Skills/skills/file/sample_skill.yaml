@@ -1,0 +1,10 @@
+name: "search_skill"
+description: "Search system files (File-based implementation)"
+version: "1.0.0"
+parameters:
+  query:
+    type: "string"
+    description: "Search keyword"
+execute_code: |
+  def execute(query):
+      return f"File-based search results for query: '{query}' [Static File scan]"

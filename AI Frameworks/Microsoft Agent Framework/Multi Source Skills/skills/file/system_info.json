@@ -1,0 +1,7 @@
+{
+  "name": "system_info",
+  "description": "Returns basic host system architecture and kernel information using shell commands",
+  "version": "1.1.0",
+  "parameters": {},
+  "command": "uname -srm"
+}
