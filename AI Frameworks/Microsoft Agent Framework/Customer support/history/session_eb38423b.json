@@ -1,0 +1,36 @@
+{
+  "session_id": "session_eb38423b",
+  "last_updated": "2026-08-06T06:00:32.845287Z",
+  "metadata": {
+    "active_agent": "Billing",
+    "status": "Online",
+    "resolved": false,
+    "escalated": false,
+    "checkpoint_id": "6bbc74eb-aca6-492b-b8e1-18c0d3c5d647",
+    "pending_request_id": "39405c38-21e5-4ef5-a593-c1c6a95059ce"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "author": "Customer",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Chech the billing status."
+        }
+      ],
+      "timestamp": "2026-08-06T05:59:52.379789+00:00Z"
+    },
+    {
+      "role": "assistant",
+      "author": "Billing",
+      "contents": [
+        {
+          "type": "text",
+          "text": "I need you to confirm the ticket ID, please. Can you tell me what your ticket number is?"
+        }
+      ],
+      "timestamp": "2026-08-06T06:00:32.845063+00:00Z"
+    }
+  ]
+}

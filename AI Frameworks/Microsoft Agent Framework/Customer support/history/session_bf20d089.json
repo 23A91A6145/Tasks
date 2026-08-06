@@ -1,0 +1,36 @@
+{
+  "session_id": "session_bf20d089",
+  "last_updated": "2026-08-06T06:02:22.702771Z",
+  "metadata": {
+    "active_agent": "Billing",
+    "status": "Online",
+    "resolved": false,
+    "escalated": false,
+    "checkpoint_id": "30638eed-edfc-4bfe-b319-a8bed39d340f",
+    "pending_request_id": "996c9a31-7ed5-495a-a40c-ceef0d1956e7"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "author": "Customer",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Hi, I need to check the status of refund."
+        }
+      ],
+      "timestamp": "2026-08-06T06:02:08.757347+00:00Z"
+    },
+    {
+      "role": "assistant",
+      "author": "Billing",
+      "contents": [
+        {
+          "type": "text",
+          "text": "I need to know what's the ticket ID for the refund you're inquiring about. Can you please tell me the ticket ID?"
+        }
+      ],
+      "timestamp": "2026-08-06T06:02:22.702656+00:00Z"
+    }
+  ]
+}

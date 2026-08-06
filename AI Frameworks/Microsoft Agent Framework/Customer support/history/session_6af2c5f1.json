@@ -1,0 +1,80 @@
+{
+  "session_id": "session_6af2c5f1",
+  "last_updated": "2026-08-06T05:45:37.518239Z",
+  "metadata": {
+    "active_agent": "Triage",
+    "status": "Online",
+    "resolved": false,
+    "escalated": false,
+    "checkpoint_id": "c4a01461-a93d-4987-9c66-0ffbfa030544",
+    "pending_request_id": "74d3528f-c4df-4632-ae35-4abf9455ee33"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "author": "Customer",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Hi, I need to check the status of my refund."
+        }
+      ],
+      "timestamp": "2026-08-06T05:40:54.165484+00:00Z"
+    },
+    {
+      "role": "assistant",
+      "author": "Billing",
+      "contents": [
+        {
+          "type": "text",
+          "text": "I apologize for the inconvenience. Can you please confirm that the ticket ID is correct? I'd like to try again once we have it."
+        }
+      ],
+      "timestamp": "2026-08-06T05:41:31.954049+00:00Z"
+    },
+    {
+      "role": "user",
+      "author": "Customer",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Gemini API is not working."
+        }
+      ],
+      "timestamp": "2026-08-06T05:42:37.191112+00:00Z"
+    },
+    {
+      "role": "assistant",
+      "author": "Billing",
+      "contents": [
+        {
+          "type": "text",
+          "text": "I think there's been a misunderstanding again. Can you please tell me what your actual ticket ID is, so I can try to look it up for you?"
+        }
+      ],
+      "timestamp": "2026-08-06T05:42:55.699634+00:00Z"
+    },
+    {
+      "role": "user",
+      "author": "Customer",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Check my API Key status."
+        }
+      ],
+      "timestamp": "2026-08-06T05:45:22.118730+00:00Z"
+    },
+    {
+      "role": "assistant",
+      "author": "Triage",
+      "contents": [
+        {
+          "type": "text",
+          "text": "{\"name\": \"handoff_to_Billing\", \"parameters\": {\"}}"
+        }
+      ],
+      "timestamp": "2026-08-06T05:45:37.518090+00:00Z"
+    }
+  ]
+}

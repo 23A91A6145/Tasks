@@ -1,0 +1,31 @@
+2026-08-06 09:35:35 [ERROR] - CLI session customer_001 workflow error: No pending requests found in workflow context.
+Traceback (most recent call last):
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/app/cli.py", line 197, in handle_cli_workflow
+    async for event in run_coro:
+    ...<35 lines>...
+                        log_chat(state.session_id, "assistant", msg.author_name, final_text)
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/.venv/lib/python3.14/site-packages/agent_framework/_types.py", line 3269, in __anext__
+    update: UpdateT = await self._iterator.__anext__()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/.venv/lib/python3.14/site-packages/agent_framework/_workflows/_workflow.py", line 876, in _run_core
+    async for event in self._run_workflow_with_tracing(
+    ...<15 lines>...
+        yield event
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/.venv/lib/python3.14/site-packages/agent_framework/_workflows/_workflow.py", line 573, in _run_workflow_with_tracing
+    await initial_executor_fn()
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/.venv/lib/python3.14/site-packages/agent_framework/_workflows/_workflow.py", line 1009, in _restore_and_send_responses
+    await self._send_responses_internal(responses)
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/.venv/lib/python3.14/site-packages/agent_framework/_workflows/_workflow.py", line 1015, in _send_responses_internal
+    raise RuntimeError("No pending requests found in workflow context.")
+RuntimeError: No pending requests found in workflow context.
+2026-08-06 09:36:10 [ERROR] - CLI exception: type object 'datetime.datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/app/cli.py", line 465, in run_cli
+    await handle_cli_workflow(state, user_input)
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Customer support/app/cli.py", line 162, in handle_cli_workflow
+    "timestamp": datetime.now(datetime.UTC).isoformat() + "Z"
+                              ^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'UTC'
+2026-08-06 09:37:30 [WARNING] - Checkpoint resumption failed for CLI session customer_001, falling back to fresh run: Failed to decode pickled checkpoint data: Checkpoint deserialization blocked for type 'agent_framework_orchestrations._handoff:HandoffAgentUserRequest'. To allow this type, either include its 'module:qualname' key in the 'allowed_types' set passed to 'decode_checkpoint_value', or add it to 'allowed_checkpoint_types' on your checkpoint storage (for example, 'FileCheckpointStorage.allowed_checkpoint_types').
+2026-08-06 09:41:24 [WARNING] - Checkpoint resumption failed for CLI session customer_001, falling back to fresh run: No pending requests found in workflow context.
+2026-08-06 09:44:39 [WARNING] - Checkpoint resumption failed for CLI session customer_001, falling back to fresh run: No pending requests found in workflow context.

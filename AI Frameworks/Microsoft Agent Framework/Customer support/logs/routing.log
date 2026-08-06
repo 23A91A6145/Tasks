@@ -1,0 +1,12 @@
+2026-08-06 09:33:59 - Session: customer_001 - Handoff: Triage -> Billing
+2026-08-06 09:36:54 - Session: customer_001 - Handoff: Triage -> Billing
+2026-08-06 09:37:32 - Session: customer_001 - Handoff: Triage -> General
+2026-08-06 09:41:06 - Session: customer_001 - Handoff: Triage -> Billing
+2026-08-06 09:41:26 - Session: customer_001 - Handoff: Triage -> General
+2026-08-06 09:44:22 - Session: customer_001 - Handoff: Triage -> Billing
+2026-08-06 09:44:41 - Session: customer_001 - Handoff: Triage -> General
+2026-08-06 09:45:59 - Session: customer_001 - Handoff: Triage -> Billing
+2026-08-06 11:11:31 - Session: session_6af2c5f1 - Handoff: Triage -> Billing
+2026-08-06 11:15:37 - Session: session_6af2c5f1 - Handoff: Billing -> Triage
+2026-08-06 11:30:32 - Session: session_eb38423b - Handoff: Triage -> Billing
+2026-08-06 11:32:22 - Session: session_bf20d089 - Handoff: Triage -> Billing
