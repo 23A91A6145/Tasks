@@ -1,0 +1,282 @@
+2026-08-06 15:29:51,320 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:29:51,321 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:29:51,321 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:29:51,321 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:29:51,321 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:29:51,321 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:29:51,324 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:29:51,324 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:29:51,324 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:29:51,324 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:29:51,324 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:29:51,324 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:29:51,324 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:29:51,325 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:29:51,325 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:29:51,325 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:29:51,326 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:29:51,326 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:29:51,326 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:29:51,326 [INFO] ComposedProvider: Skill composition complete in 0.0052s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:29:51,326 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:31:16,639 [INFO] AssistantAgent: Agent prompt: 'use of antigravity.'
+2026-08-06 15:31:16,639 [INFO] AssistantAgent: Thought: I could not map the user query to any registered skill. I will explain my capabilities.
+2026-08-06 15:31:39,066 [INFO] AssistantAgent: Agent prompt: 'how to use this project with examples, aim and more'
+2026-08-06 15:31:39,066 [INFO] AssistantAgent: Thought: I could not map the user query to any registered skill. I will explain my capabilities.
+2026-08-06 15:33:08,166 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:08,166 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:08,166 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:08,166 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:08,166 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:08,166 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:08,169 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:08,169 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:08,169 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:08,169 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:08,169 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:08,169 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:08,169 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:08,170 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:08,170 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:08,170 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:08,170 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:08,171 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:08,171 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:08,171 [INFO] ComposedProvider: Skill composition complete in 0.0047s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:08,171 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:33:17,560 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:17,560 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:17,560 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:17,560 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:17,560 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:17,560 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:17,562 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:17,563 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:17,563 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:17,563 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:17,563 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:17,563 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:17,563 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:17,564 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:17,564 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:17,564 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:17,564 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:17,564 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:17,564 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:17,564 [INFO] ComposedProvider: Skill composition complete in 0.0040s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:17,564 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:33:22,163 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:22,163 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:22,163 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:22,163 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:22,163 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:22,163 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:22,165 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:22,165 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:22,165 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:22,166 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:22,166 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:22,166 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:22,166 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:22,166 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:22,166 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:22,166 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:22,167 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:22,167 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:22,167 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:22,167 [INFO] ComposedProvider: Skill composition complete in 0.0041s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:22,167 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:33:29,469 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:29,469 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:29,469 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:29,469 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:29,469 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:29,470 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:29,472 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:29,472 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:29,472 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:29,472 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:29,473 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:29,473 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:29,473 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:29,473 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:29,473 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:29,474 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:29,474 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:29,474 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:29,474 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:29,474 [INFO] ComposedProvider: Skill composition complete in 0.0047s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:29,474 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:33:39,291 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:39,292 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:39,292 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:39,292 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:39,292 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:33:39,307 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:39,308 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:39,310 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:39,311 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:39,311 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:39,311 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:39,311 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:39,311 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:39,311 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:39,312 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:39,312 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:39,312 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:39,312 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:39,312 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:39,313 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:39,313 [INFO] ComposedProvider: Skill composition complete in 0.0049s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:51,005 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:33:51,006 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:33:51,006 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:33:51,006 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:33:51,006 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:33:51,006 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:33:51,007 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:33:51,009 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:33:51,009 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:33:51,009 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:33:51,009 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:33:51,009 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:33:51,009 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:33:51,010 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:33:51,010 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:33:51,010 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:33:51,010 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:33:51,010 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:33:51,011 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:33:51,011 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:33:51,011 [INFO] ComposedProvider: Skill composition complete in 0.0044s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:33:51,011 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:34:06,656 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:34:06,657 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:34:06,657 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:34:06,657 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:34:06,657 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:34:06,658 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:34:06,658 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:34:06,662 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:34:06,662 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:34:06,662 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:34:06,662 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:34:06,663 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:34:06,663 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:34:06,663 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:34:06,663 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:34:06,664 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:34:06,664 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:34:06,664 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:34:06,664 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:34:06,664 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:34:06,664 [INFO] ComposedProvider: Skill composition complete in 0.0058s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:34:06,664 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:35:15,096 [INFO] AssistantAgent: Agent prompt: 'subtract 15 from 100'
+2026-08-06 15:35:15,096 [INFO] AssistantAgent: Thought: User wants to subtract 100.0 from 15.0. I will use the math_subtract skill.
+2026-08-06 15:35:15,097 [INFO] SkillRegistry: Executing skill 'math_subtract' (Source: class [class:MathSkills.subtract]) with arguments {'a': 15.0, 'b': 100.0}
+2026-08-06 15:35:15,105 [INFO] SkillRegistry: Successfully executed skill 'math_subtract' in 0.01ms. Result: -85.0
+2026-08-06 15:35:31,124 [INFO] AssistantAgent: Agent prompt: 'add 12+65'
+2026-08-06 15:35:31,124 [INFO] AssistantAgent: Thought: User wants to add two numbers (12.0 and 65.0). I will use the math_add skill.
+2026-08-06 15:35:31,124 [INFO] SkillRegistry: Executing skill 'math_add' (Source: inline [inline_function:add_numbers]) with arguments {'a': 12.0, 'b': 65.0}
+2026-08-06 15:35:31,133 [INFO] SkillRegistry: Successfully executed skill 'math_add' in 0.01ms. Result: 77.0
+2026-08-06 15:36:01,376 [INFO] SkillRegistry: Executing skill 'search_skill' (Source: inline [inline_function:inline_search]) with arguments {'query': 'add'}
+2026-08-06 15:36:01,384 [INFO] SkillRegistry: Successfully executed skill 'search_skill' in 0.01ms. Result: Inline Search results for: 'add'
+2026-08-06 15:39:03,998 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:39:03,999 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:39:03,999 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:39:03,999 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:39:03,999 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:39:03,999 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:39:04,000 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:39:04,002 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:39:04,002 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:39:04,002 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:39:04,002 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:39:04,002 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:39:04,003 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:39:04,003 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:39:04,003 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:39:04,003 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:39:04,003 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:39:04,003 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:39:04,004 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:39:04,004 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:39:04,004 [INFO] ComposedProvider: Skill composition complete in 0.0042s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:39:04,004 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:39:19,383 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:39:19,384 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:39:19,384 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:39:19,384 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:39:19,384 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:39:19,385 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:39:19,385 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:39:19,387 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:39:19,387 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:39:19,387 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:39:19,388 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:39:19,388 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:39:19,388 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:39:19,388 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:39:19,388 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:39:19,388 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:39:19,388 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:39:19,389 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:39:19,389 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:39:19,389 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:39:19,389 [INFO] ComposedProvider: Skill composition complete in 0.0042s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:39:19,389 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:44:48,604 [INFO] ComposedProvider: Initializing auto-discovered providers...
+2026-08-06 15:44:48,604 [INFO] ComposedProvider: Registered FileProvider
+2026-08-06 15:44:48,604 [INFO] ComposedProvider: Registered InlineProvider
+2026-08-06 15:44:48,604 [INFO] ComposedProvider: Registered ClassProvider
+2026-08-06 15:44:48,604 [INFO] DatabaseManager: Initializing database at /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/logs/skills_provider.db
+2026-08-06 15:44:48,605 [INFO] SkillManager: Triggering a complete reload of the skill providers...
+2026-08-06 15:44:48,605 [INFO] ComposedProvider: Loading skills from provider: file_provider
+2026-08-06 15:44:48,608 [INFO] ComposedProvider: Loaded 4 raw skills from file_provider
+2026-08-06 15:44:48,608 [INFO] ComposedProvider: Loading skills from provider: inline_provider
+2026-08-06 15:44:48,608 [INFO] SkillsProvider: Loading inline skills from module /home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/skills/inline/sample_inline.py
+2026-08-06 15:44:48,608 [INFO] SkillsProvider: Successfully loaded inline skills from skills/inline/sample_inline.py
+2026-08-06 15:44:48,608 [INFO] ComposedProvider: Loaded 3 raw skills from inline_provider
+2026-08-06 15:44:48,608 [INFO] ComposedProvider: Loading skills from provider: class_provider
+2026-08-06 15:44:48,609 [INFO] SkillsProvider: Importing class skills module: skills.classes.sample_class
+2026-08-06 15:44:48,609 [INFO] SkillsProvider: Instantiating class EmailSkills for skill discovery
+2026-08-06 15:44:48,609 [INFO] SkillsProvider: Instantiating class MathSkills for skill discovery
+2026-08-06 15:44:48,610 [INFO] SkillsProvider: Instantiating class SearchSkills for skill discovery
+2026-08-06 15:44:48,610 [INFO] ComposedProvider: Loaded 3 raw skills from class_provider
+2026-08-06 15:44:48,610 [WARNING] SkillsResolver: Conflict detected for skill 'search_skill': 3 sources found.
+2026-08-06 15:44:48,610 [INFO] SkillsResolver: Resolved conflict for 'search_skill': Winner is 'inline' (inline_function:inline_search) due to Highest resolved priority (Priority: 100, Source: 'inline')
+2026-08-06 15:44:48,610 [INFO] ComposedProvider: Skill composition complete in 0.0047s. Active skills: 8, Conflicts detected: 1
+2026-08-06 15:44:48,610 [INFO] SkillManager: Skill registry cache refreshed successfully.
+2026-08-06 15:55:24,386 [INFO] AssistantAgent: Agent prompt: 'Translate WOW into telugu.'
+2026-08-06 15:55:24,386 [INFO] AssistantAgent: Thought: Translation requested but details ambiguous. Defaulting to Spanish translation.
+2026-08-06 15:55:24,387 [INFO] SkillRegistry: Executing skill 'translate' (Source: inline [inline_function:translate_text]) with arguments {'text': 'Translate WOW into telugu.', 'language': 'Spanish'}
+2026-08-06 15:55:24,396 [INFO] SkillRegistry: Successfully executed skill 'translate' in 0.01ms. Result: [Spanish] Translate WOW into telugu. - traducido
+2026-08-06 15:56:05,059 [INFO] SkillRegistry: Executing skill 'translate' (Source: inline [inline_function:translate_text]) with arguments {'text': 'WOW', 'language': 'Spanish'}
+2026-08-06 15:56:05,065 [INFO] SkillRegistry: Successfully executed skill 'translate' in 0.01ms. Result: [Spanish] WOW - traducido
+2026-08-06 15:57:06,394 [INFO] SkillRegistry: Executing skill 'translate' (Source: inline [inline_function:translate_text]) with arguments {'text': 'Sir', 'language': 'Spanish'}
+2026-08-06 15:57:06,403 [INFO] SkillRegistry: Successfully executed skill 'translate' in 0.01ms. Result: [Spanish] Sir - traducido
+2026-08-06 16:00:14,870 [INFO] SkillRegistry: Executing skill 'send_email' (Source: class [class:EmailSkills.send]) with arguments {'recipient': 'charankumarreddy0612@gmail.com', 'subject': 'Welcome', 'body': 'Warm welcome to Multi source'}
+2026-08-06 16:00:14,879 [INFO] SkillRegistry: Successfully executed skill 'send_email' in 0.04ms. Result: Email successfully sent to charankumarreddy0612@gmail.com with subject 'Welcome'. Body bytes: 28
+2026-08-06 16:01:25,556 [INFO] SkillRegistry: Executing skill 'system_info' (Source: file [skills/file/system_info.json]) with arguments {}
+2026-08-06 16:01:25,556 [INFO] SkillsProvider: Executing system command skill: uname -srm
+2026-08-06 16:01:25,575 [INFO] SkillRegistry: Successfully executed skill 'system_info' in 9.91ms. Result: Linux 7.0.0-29-generic x86_64
+2026-08-06 16:02:29,695 [INFO] SkillRegistry: Executing skill 'math_factorial' (Source: file [skills/file/python_skill.py]) with arguments {}
+2026-08-06 16:02:29,695 [ERROR] SkillRegistry: Error executing skill 'math_factorial' in 0.02ms: execute() missing 1 required positional argument: 'n'
+Traceback (most recent call last):
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/agents/registry.py", line 91, in execute
+    result = skill.execute(**kwargs)
+  File "/home/cherry/Desktop/1_Gen/Tasks/MAF/Multi Source Skills/models/skill.py", line 22, in execute
+    return self.handler(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: execute() missing 1 required positional argument: 'n'
+2026-08-06 16:02:47,210 [INFO] SkillRegistry: Executing skill 'markdown_greet' (Source: file [skills/file/markdown_skill.md]) with arguments {'name': 'Warm'}
+2026-08-06 16:02:47,215 [INFO] SkillRegistry: Successfully executed skill 'markdown_greet' in 0.01ms. Result: Hello, Warm! This greeting is dynamically executed from a Markdown file code block.
+2026-08-06 16:04:13,597 [INFO] SkillRegistry: Executing skill 'search_skill' (Source: inline [inline_function:inline_search]) with arguments {'query': 'AI Tiools'}
+2026-08-06 16:04:13,607 [INFO] SkillRegistry: Successfully executed skill 'search_skill' in 0.01ms. Result: Inline Search results for: 'AI Tiools'
+2026-08-06 16:04:27,125 [INFO] SkillRegistry: Executing skill 'math_add' (Source: inline [inline_function:add_numbers]) with arguments {'a': 2, 'b': 4}
+2026-08-06 16:04:27,134 [INFO] SkillRegistry: Successfully executed skill 'math_add' in 0.01ms. Result: 6
+2026-08-06 16:05:12,086 [INFO] SkillRegistry: Executing skill 'translate' (Source: inline [inline_function:translate_text]) with arguments {'text': 'Hello', 'language': 'Spanish'}
+2026-08-06 16:05:12,092 [INFO] SkillRegistry: Successfully executed skill 'translate' in 0.01ms. Result: [Spanish] Hello - traducido
+2026-08-06 16:08:56,556 [INFO] SkillRegistry: Executing skill 'math_add' (Source: inline [inline_function:add_numbers]) with arguments {'a': 4, 'b': 4}
+2026-08-06 16:08:56,569 [INFO] SkillRegistry: Successfully executed skill 'math_add' in 0.01ms. Result: 8

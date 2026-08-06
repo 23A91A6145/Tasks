@@ -1,0 +1,15 @@
+# Default priorities for skill sources (higher value = higher priority)
+default_priorities:
+  inline: 100
+  class: 80
+  file: 50
+
+# Overrides for specific skills by name to force a winner
+skill_overrides:
+  # Example override:
+  # search:
+  #   preferred_source: "class"
+  #   reason: "Use class-based implementation for search"
+  math_add:
+    preferred_source: "inline"
+    reason: "Inline math_add is optimized for quick returns"

@@ -1,0 +1,21 @@
+providers:
+  file_provider:
+    enabled: true
+    priority_offset: 0
+    directory: "skills/file"
+    allowed_extensions:
+      - ".yaml"
+      - ".json"
+      - ".py"
+      - ".md"
+  
+  inline_provider:
+    enabled: true
+    priority_offset: 0
+    module_path: "skills/inline/sample_inline.py"
+
+  class_provider:
+    enabled: true
+    priority_offset: 0
+    modules:
+      - "skills.classes.sample_class"
