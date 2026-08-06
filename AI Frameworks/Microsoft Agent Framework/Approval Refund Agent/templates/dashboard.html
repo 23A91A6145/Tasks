@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Refund Compliance Center (HITL)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: rgba(13, 20, 35, 0.7);
+            --bg-input: rgba(22, 30, 49, 0.6);
+            --border-glow: rgba(99, 102, 241, 0.15);
+            --border-hover: rgba(99, 102, 241, 0.35);
+            
+            --text-primary: #f3f4f6;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.1);
+            --warning: #f59e0b;
+            --warning-glow: rgba(245, 158, 11, 0.1);
+            --danger: #ef4444;
+            --danger-glow: rgba(239, 68, 68, 0.1);
+            --purple: #8b5cf6;
+            --purple-glow: rgba(139, 92, 246, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            background: rgba(9, 13, 22, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .reviewer-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--bg-card);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-glow);
+        }
+
+        .reviewer-controls label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .reviewer-select {
+            background: var(--bg-input);
+            border: 1px solid var(--border-glow);
+            color: var(--text-primary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .reviewer-select:focus {
+            border-color: var(--primary);
+        }
+
+        .framework-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            padding: 0.5rem 0.9rem;
+            border-radius: 12px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        .fw-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        .fw-dot.real { background: var(--success); color: var(--success); }
+        .fw-dot.sim { background: var(--warning); color: var(--warning); }
+
+        .main-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-hover);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.05);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+        }
+
+        .stat-card.pending::before { background: var(--warning); }
+        .stat-card.approved::before { background: var(--success); }
+        .stat-card.rejected::before { background: var(--danger); }
+        .stat-card.today::before { background: var(--primary); }
+        .stat-card.time::before { background: var(--purple); }
+        .stat-card.escalated::before { background: var(--purple); }
+        .stat-card.value::before { background: var(--success); }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        /* Content Layout */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1.85fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1100px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 0.75rem;
+        }
+
+        .panel-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Chat Console */
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 520px;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-right: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .message-bubble {
+            max-width: 85%;
+            padding: 0.8rem 1rem;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .message-bubble.user {
+            background: var(--primary);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-bubble.agent {
+            background: var(--bg-input);
+            border: 1px solid var(--border-glow);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message-bubble.system-card {
+            background: rgba(99, 102, 241, 0.03);
+            border: 1px dashed rgba(99, 102, 241, 0.4);
+            max-width: 100%;
+            align-self: center;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .chat-input-area {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            flex-grow: 1;
+            background: var(--bg-input);
+            border: 1px solid var(--border-glow);
+            border-radius: 10px;
+            color: var(--text-primary);
+            padding: 0.7rem 0.9rem;
+            font-family: inherit;
+            font-size: 0.88rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .chat-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 10px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Approvals Queue Pane */
+        .queue-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            height: 520px;
+        }
+
+        @media (max-width: 800px) {
+            .queue-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel-nav {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.35rem 0.75rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .queue-list-section {
+            border-right: 1px solid rgba(255, 255, 255, 0.04);
+            padding-right: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            overflow-y: auto;
+        }
+
+        .approval-card {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .approval-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--border-hover);
+        }
+
+        .approval-card.active {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.04);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-id {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-badge.pending { background: var(--warning-glow); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.2); }
+        .status-badge.approved { background: var(--success-glow); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.2); }
+        .status-badge.rejected { background: var(--danger-glow); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.2); }
+        .status-badge.escalated { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .status-badge.hold { background: rgba(255, 255, 255, 0.04); color: #e4e4e7; border: 1px solid rgba(255, 255, 255, 0.15); }
+        .status-badge.requestmoreinfo { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.2); }
+
+        .card-amount {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .card-details {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        /* Detail Form Panel */
+        .detail-pane {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            overflow-y: auto;
+            padding-left: 0.25rem;
+        }
+
+        .detail-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .detail-placeholder-icon {
+            font-size: 2.2rem;
+            opacity: 0.4;
+        }
+
+        /* Customer Safety Card */
+        .customer-card-box {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .customer-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            padding-bottom: 0.5rem;
+        }
+
+        .customer-card-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .detail-item-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .detail-item-value {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .risk-badge {
+            width: fit-content;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .risk-badge.low { background: var(--success-glow); color: var(--success); }
+        .risk-badge.medium { background: var(--warning-glow); color: var(--warning); }
+        .risk-badge.high { background: var(--danger-glow); color: var(--danger); }
+
+        .acc-status-badge {
+            width: fit-content;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .acc-status-badge.active { background: var(--success-glow); color: var(--success); }
+        .acc-status-badge.flagged { background: var(--danger-glow); color: var(--danger); }
+
+        /* Timeline check stepper */
+        .timeline-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: 2px;
+            height: calc(100% - 0.75rem);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-step {
+            font-size: 0.78rem;
+            position: relative;
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -1.3rem;
+            top: 0.25rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .timeline-step.completed::before {
+            background: var(--success);
+            box-shadow: 0 0 6px var(--success);
+        }
+
+        .timeline-step.pending-step::before {
+            background: var(--warning);
+            box-shadow: 0 0 6px var(--warning);
+        }
+
+        .timeline-step-title {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .timeline-step-time {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+        }
+
+        /* Action Form */
+        .action-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 0.75rem;
+        }
+
+        .action-notes {
+            background: var(--bg-input);
+            border: 1px solid var(--border-glow);
+            border-radius: 8px;
+            color: var(--text-primary);
+            padding: 0.5rem;
+            font-family: inherit;
+            font-size: 0.82rem;
+            resize: none;
+            outline: none;
+            height: 52px;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+        }
+
+        .btn-action {
+            padding: 0.45rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-action:hover {
+            opacity: 0.85;
+        }
+
+        .btn-action.approve { background: var(--success); color: #fff; }
+        .btn-action.reject { background: var(--danger); color: #fff; }
+        .btn-action.hold { background: #4b5563; color: #fff; }
+        .btn-action.escalate { background: var(--purple); color: #fff; grid-column: span 2; }
+        .btn-action.reqinfo { background: var(--warning); color: #000; }
+
+        /* Notification Preview Inbox */
+        .inbox-card {
+            background: rgba(99, 102, 241, 0.02);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .inbox-title {
+            font-size: 0.72rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .inbox-headers {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .inbox-body {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: #d1d5db;
+            white-space: pre-wrap;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        /* Decision History Table */
+        .history-table-container {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+
+        .history-table th {
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+        }
+
+        .history-table td {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        .history-table tr:hover {
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        /* Pure CSS Stats Chart Section */
+        .analytics-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.015);
+            padding: 0.75rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            margin-top: 0.25rem;
+        }
+
+        .bar-chart-visual {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-row-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            width: 55px;
+        }
+
+        .chart-row-bar-bg {
+            flex-grow: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-row-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.1, 0.8, 0.2, 1);
+        }
+
+        .chart-row-bar-fill.approved { background: var(--success); }
+        .chart-row-bar-fill.rejected { background: var(--danger); }
+        .chart-row-bar-fill.pending { background: var(--warning); }
+
+        .chart-row-val {
+            font-size: 0.7rem;
+            width: 25px;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* Logs Console */
+        .logs-section {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1100px) {
+            .logs-section {
+                grid-column: span 1;
+            }
+        }
+
+        .logs-tabs {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.82rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--bg-input);
+            color: var(--primary);
+            border: 1px solid var(--border-glow);
+        }
+
+        .log-console {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 0.85rem;
+            height: 220px;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: #d1d5db;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .log-line {
+            line-height: 1.4;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+            padding-bottom: 0.15rem;
+        }
+
+        .log-line.audit-entry {
+            color: #a7f3d0;
+        }
+        .log-line.error-entry {
+            color: #fca5a5;
+        }
+
+        /* Toast notifications */
+        .toast-container {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toast {
+            background: rgba(13, 20, 35, 0.95);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+            font-size: 0.82rem;
+            min-width: 280px;
+            max-width: 380px;
+            transform: translateX(120%);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(8px);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success { border-color: var(--success); }
+        .toast.danger { border-color: var(--danger); }
+        .toast.warning { border-color: var(--warning); }
+
+        .toast-header {
+            font-weight: 600;
+        }
+
+        .toast-body {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-section">
+            <span class="logo-icon">🛡️</span>
+            <div class="logo-text">
+                <h1>Refund Compliance & Safety Center</h1>
+                <p>Microsoft Agent Framework (Human-in-the-Loop Orchestration)</p>
+            </div>
+        </div>
+        
+        <div style="display:flex; align-items:center; gap:1rem;">
+            <div class="framework-badge" id="framework-badge">
+                <span class="fw-dot" id="fw-dot"></span>
+                <span id="fw-text">Checking runtime…</span>
+            </div>
+            <div class="reviewer-controls">
+                <label for="role-select">Active Session Reviewer:</label>
+                <select id="role-select" class="reviewer-select" onchange="onReviewerChange()">
+                    <option value="Alice Smith (Reviewer)" data-role="Reviewer">Alice Smith (Standard Reviewer)</option>
+                    <option value="Bob Johnson (Manager)" data-role="Manager">Bob Johnson (Compliance Manager)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Stats Row -->
+        <div class="stats-grid" id="stats-container">
+            <div class="stat-card pending">
+                <span class="stat-label">Pending Reviews</span>
+                <span class="stat-value" id="stat-pending">-</span>
+            </div>
+            <div class="stat-card approved">
+                <span class="stat-label">Approved Refunds</span>
+                <span class="stat-value" id="stat-approved">-</span>
+            </div>
+            <div class="stat-card rejected">
+                <span class="stat-label">Rejected Refunds</span>
+                <span class="stat-value" id="stat-rejected">-</span>
+            </div>
+            <div class="stat-card today">
+                <span class="stat-label">Today's Requests</span>
+                <span class="stat-value" id="stat-today">-</span>
+            </div>
+            <div class="stat-card time">
+                <span class="stat-label">Avg. Review Time</span>
+                <span class="stat-value" id="stat-time">-</span>
+            </div>
+            <div class="stat-card escalated">
+                <span class="stat-label">Escalated</span>
+                <span class="stat-value" id="stat-escalated">-</span>
+            </div>
+            <div class="stat-card value">
+                <span class="stat-label">Today's Refund Value</span>
+                <span class="stat-value" id="stat-value" style="font-size:1.35rem;">-</span>
+            </div>
+        </div>
+
+        <div class="layout-grid">
+            
+            <!-- Panel Left: Chat Console -->
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">💬 Compliance Agent Shell</div>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message-bubble agent">
+                            Hi, I am your safety-gated Refund Agent. I can prepare refund tickets, but I cannot execute them without human authorization. 
+                            <br><br>
+                            Try typing: <b>"Process a refund of $125 for customer CUST-1045 order ORD-5582 due to wrong item shipped"</b>
+                            <br><br>
+                            <i>Optimization Check:</i> Try typing a Low Risk order value $\le$ $50: <b>"Process a refund of $45 for CUST-1045 order ORD-5582 due to shipping mismatch"</b> to see the ⚡ <b>Auto-Approval</b> pipeline execute!
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" class="chat-input" placeholder="Type a refund request..." onkeypress="handleChatKey(event)">
+                        <button class="btn" onclick="sendChatMessage()">Send ⚡</button>
+                    </div>
+                </div>
+                <!-- Compliance Stats visualizer (Phase 3.1 & 3.4) -->
+                <div class="analytics-container">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--text-secondary); text-transform:uppercase; writing-mode:vertical-lr; transform:rotate(180deg); border-right:1px solid rgba(255,255,255,0.05); padding-right:0.35rem; white-space:nowrap; letter-spacing:0.05em;">Compliance Outcomes</div>
+                    <div class="bar-chart-visual" id="bar-chart-visual">
+                        <div class="chart-row">
+                            <span class="chart-row-label">Approved</span>
+                            <div class="chart-row-bar-bg">
+                                <div class="chart-row-bar-fill approved" id="bar-fill-approved" style="width: 0%;"></div>
+                            </div>
+                            <span class="chart-row-val" id="bar-val-approved">0%</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-row-label">Rejected</span>
+                            <div class="chart-row-bar-bg">
+                                <div class="chart-row-bar-fill rejected" id="bar-fill-rejected" style="width: 0%;"></div>
+                            </div>
+                            <span class="chart-row-val" id="bar-val-rejected">0%</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-row-label">Pending</span>
+                            <div class="chart-row-bar-bg">
+                                <div class="chart-row-bar-fill pending" id="bar-fill-pending" style="width: 0%;"></div>
+                            </div>
+                            <span class="chart-row-val" id="bar-val-pending">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel Right: DevUI Approvals Queue & History -->
+            <div class="panel">
+                <div class="panel-header" style="flex-direction: row; justify-content: flex-start; gap: 2rem;">
+                    <div class="panel-nav">
+                        <button class="nav-tab-btn active" id="btn-tab-queue" onclick="toggleRightPane('queue')">Pending Queue</button>
+                        <button class="nav-tab-btn" id="btn-tab-history" onclick="toggleRightPane('history')">Processed History</button>
+                    </div>
+                </div>
+                <div class="queue-container">
+                    
+                    <!-- Left List Pane -->
+                    <div class="approval-list-section" id="approvals-list">
+                        <!-- Card slots will fill dynamically -->
+                    </div>
+
+                    <!-- Left History Pane (Hidden initially) -->
+                    <div class="history-table-container" id="history-section" style="display: none; grid-column: span 1;">
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Reviewer</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-table-body">
+                                <!-- Processed items dynamically fill -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Right Detail & Form -->
+                    <div class="detail-pane" id="detail-pane">
+                        <div class="detail-placeholder">
+                            <span class="detail-placeholder-icon">📋</span>
+                            <p>Select a refund ticket from the left panel to review metadata, verify timelines, and authorize operations.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Logs console -->
+            <div class="panel logs-section">
+                <div class="panel-header">
+                    <div class="panel-title">📜 Immutable Compliance Audit Trails</div>
+                    <div class="logs-tabs">
+                        <button class="tab-btn active" onclick="loadLogs('audit', this)">Audit Logs</button>
+                        <button class="tab-btn" onclick="loadLogs('approvals', this)">Approval Operations</button>
+                        <button class="tab-btn" onclick="loadLogs('errors', this)">System Alerts</button>
+                    </div>
+                </div>
+                <div class="log-console" id="log-console">
+                    <!-- Logs lines -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Toast Notifications Area -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script>
+        let selectedRequestId = null;
+        let allApprovals = [];
+        let activeRightPaneTab = 'queue'; // queue or history
+
+        // Run on startup
+        window.addEventListener('DOMContentLoaded', () => {
+            refreshFrameworkBadge();
+            refreshStats();
+            refreshApprovals();
+            loadLogs('audit', document.querySelector('.tab-btn.active'));
+            // Auto refresh queue
+            setInterval(refreshStats, 4000);
+            setInterval(refreshApprovals, 4000);
+        });
+
+        async function refreshFrameworkBadge() {
+            try {
+                const res = await fetch('/api/info');
+                const info = await res.json();
+                const dot = document.getElementById('fw-dot');
+                const text = document.getElementById('fw-text');
+                if (info.framework_available) {
+                    dot.className = 'fw-dot real';
+                    text.innerText = `Microsoft Agent Framework · approval_mode=always_require · ${info.llm_provider}`;
+                } else {
+                    dot.className = 'fw-dot sim';
+                    text.innerText = 'Simulated MAF Runtime (pip install agent-framework-core)';
+                }
+            } catch (err) {
+                console.error("Framework info fetch error:", err);
+            }
+        }
+
+        function showToast(title, body, type = 'primary') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <div class="toast-header">${title}</div>
+                <div class="toast-body">${body}</div>
+            `;
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 50);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 4500);
+        }
+
+        async function refreshStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const stats = await res.json();
+                
+                document.getElementById('stat-pending').innerText = stats.pending_count;
+                document.getElementById('stat-approved').innerText = stats.approved_count;
+                document.getElementById('stat-rejected').innerText = stats.rejected_count;
+                document.getElementById('stat-today').innerText = stats.today_requests_count;
+                document.getElementById('stat-escalated').innerText = stats.escalated_count;
+                document.getElementById('stat-value').innerText = `$${stats.today_refund_value.toFixed(2)}`;
+                
+                // Format average time
+                const seconds = stats.avg_processing_time_seconds;
+                if (seconds === 0) {
+                    document.getElementById('stat-time').innerText = "0s";
+                } else if (seconds < 60) {
+                    document.getElementById('stat-time').innerText = `${seconds.toFixed(0)}s`;
+                } else {
+                    const mins = Math.floor(seconds / 60);
+                    const secs = Math.floor(seconds % 60);
+                    document.getElementById('stat-time').innerText = `${mins}m ${secs}s`;
+                }
+
+                // Update CSS statistics bars dynamically (Phase 3.1)
+                updateStatsVisual(stats);
+            } catch (err) {
+                console.error("Stats fetch error:", err);
+            }
+        }
+
+        function updateStatsVisual(stats) {
+            const total = stats.approved_count + stats.rejected_count + stats.pending_count;
+            if (total === 0) return;
+            
+            const appPct = (stats.approved_count / total) * 100;
+            const rejPct = (stats.rejected_count / total) * 100;
+            const pendPct = (stats.pending_count / total) * 100;
+
+            const visualBox = document.getElementById('bar-chart-visual');
+            if (visualBox) {
+                document.getElementById('bar-fill-approved').style.width = `${appPct}%`;
+                document.getElementById('bar-val-approved').innerText = `${appPct.toFixed(0)}%`;
+                
+                document.getElementById('bar-fill-rejected').style.width = `${rejPct}%`;
+                document.getElementById('bar-val-rejected').innerText = `${rejPct.toFixed(0)}%`;
+                
+                document.getElementById('bar-fill-pending').style.width = `${pendPct}%`;
+                document.getElementById('bar-val-pending').innerText = `${pendPct.toFixed(0)}%`;
+            }
+        }
+
+        async function refreshApprovals() {
+            try {
+                const res = await fetch('/api/approvals');
+                const reqs = await res.json();
+                allApprovals = reqs;
+                
+                // Filter out non-pending for the left queue section
+                const pendingReqs = reqs.filter(r => r.status !== "Approved" && r.status !== "Rejected");
+                // Finalized requests for history section
+                const finalizedReqs = reqs.filter(r => r.status === "Approved" || r.status === "Rejected");
+
+                renderApprovalsList(pendingReqs);
+                renderHistoryTable(finalizedReqs);
+                
+                // Update selected detail panel dynamically if open
+                if (selectedRequestId) {
+                    const updatedReq = reqs.find(r => r.id === selectedRequestId);
+                    if (updatedReq) {
+                        renderDetailPanel(updatedReq);
+                    }
+                }
+            } catch (err) {
+                console.error("Approvals fetch error:", err);
+            }
+        }
+
+        function toggleRightPane(tab) {
+            activeRightPaneTab = tab;
+            document.getElementById('btn-tab-queue').classList.toggle('active', tab === 'queue');
+            document.getElementById('btn-tab-history').classList.toggle('active', tab === 'history');
+            
+            document.getElementById('approvals-list').style.display = tab === 'queue' ? 'flex' : 'none';
+            document.getElementById('history-section').style.display = tab === 'history' ? 'block' : 'none';
+        }
+
+        function renderApprovalsList(pendingReqs) {
+            const listContainer = document.getElementById('approvals-list');
+            const currentlySelected = selectedRequestId;
+            
+            listContainer.innerHTML = '';
+            
+            if (pendingReqs.length === 0) {
+                listContainer.innerHTML = '<div style="color:var(--text-muted); font-size:0.85rem; text-align:center; padding-top:2rem;">Pending queue is empty</div>';
+                return;
+            }
+            
+            pendingReqs.forEach(req => {
+                const isActive = req.id === currentlySelected;
+                const card = document.createElement('div');
+                card.className = `approval-card ${isActive ? 'active' : ''}`;
+                card.onclick = () => selectRequest(req.id);
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="card-id">${req.id}</span>
+                        <span class="status-badge ${req.status.toLowerCase().replace(/ /g, '')}">${req.status}</span>
+                    </div>
+                    <div class="card-amount">$${req.amount.toFixed(2)}</div>
+                    <div class="card-details">
+                        Customer: ${req.customer_id}<br>
+                        Auth Role: <b>${req.role_required}</b>
+                    </div>
+                `;
+                listContainer.appendChild(card);
+            });
+        }
+
+        function renderHistoryTable(finalizedReqs) {
+            const tbody = document.getElementById('history-table-body');
+            tbody.innerHTML = '';
+            
+            if (finalizedReqs.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="color:var(--text-muted); text-align:center; padding:1.5rem;">No historical reviews</td></tr>';
+                return;
+            }
+
+            finalizedReqs.forEach(req => {
+                const tr = document.createElement('tr');
+                tr.style.cursor = 'pointer';
+                tr.onclick = () => selectRequest(req.id);
+                if (req.id === selectedRequestId) {
+                    tr.style.background = 'rgba(255, 255, 255, 0.03)';
+                }
+                
+                tr.innerHTML = `
+                    <td style="font-family:\'JetBrains Mono\', monospace; font-size:0.75rem;">${req.id}</td>
+                    <td>${req.customer_id}</td>
+                    <td style="font-weight:600;">$${req.amount.toFixed(2)}</td>
+                    <td><span class="status-badge ${req.status.toLowerCase()}">${req.status}</span></td>
+                    <td>${req.reviewer ? req.reviewer.split(' ')[0] : 'System'}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function selectRequest(id) {
+            selectedRequestId = id;
+            
+            // Highlight list selection
+            document.querySelectorAll('.approval-card').forEach(card => {
+                card.classList.remove('active');
+                if (card.querySelector('.card-id').innerText === id) {
+                    card.classList.add('active');
+                }
+            });
+
+            // Highlight history table row selection
+            document.querySelectorAll('.history-table tbody tr').forEach(tr => {
+                tr.style.background = '';
+                const rowId = tr.querySelector('td')?.innerText;
+                if (rowId === id) {
+                    tr.style.background = 'rgba(255, 255, 255, 0.03)';
+                }
+            });
+            
+            const req = allApprovals.find(r => r.id === id);
+            if (req) {
+                renderDetailPanel(req);
+            }
+        }
+
+        function renderDetailPanel(req) {
+            const detailPane = document.getElementById('detail-pane');
+            
+            let riskClass = req.risk_level.toLowerCase();
+            
+            // Timeline step indicator logic
+            const timelineHtml = req.timeline.map((step, idx) => {
+                const isFinalStep = idx === req.timeline.length - 1;
+                const timeFormatted = new Date(step.timestamp).toLocaleTimeString();
+                
+                let stepClass = 'completed';
+                if (req.status === "Pending" && isFinalStep) {
+                    stepClass = 'pending-step';
+                }
+                
+                return `
+                    <div class="timeline-step ${stepClass}">
+                        <div class="timeline-step-title">${step.step}</div>
+                        <div class="timeline-step-time">${timeFormatted}</div>
+                    </div>
+                `;
+            }).join('');
+
+            // Review Notes & Outcomes Section
+            const isFinalized = req.status === "Approved" || req.status === "Rejected";
+            const decisionSectionHtml = isFinalized ? `
+                <div style="background: rgba(255, 255, 255, 0.02); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); font-size:0.8rem;">
+                    <div style="font-weight:600; color:var(--text-secondary); margin-bottom:0.2rem;">Compliance Decision Log</div>
+                    <div>Authorized By: <b>${req.reviewer || 'System / Policies Engine'}</b></div>
+                    <div>Reviewer Notes: <i>"${req.notes || 'None recorded'}"</i></div>
+                    <div style="margin-top:0.4rem; color:var(--success); font-weight:600; display:flex; align-items:center; gap:0.25rem;">
+                        <span>✓</span> <span>Transaction finalized successfully.</span>
+                    </div>
+                </div>
+            ` : `
+                <div class="action-form">
+                    <label style="font-size:0.75rem; font-weight:500; color:var(--text-secondary);">Compliance Notes (Reasoning):</label>
+                    <textarea id="decision-notes" class="action-notes" placeholder="Specify decision notes or customer clarifications..."></textarea>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-action approve" onclick="submitDecision('Approve')">Approve</button>
+                        <button class="btn-action reject" onclick="submitDecision('Reject')">Reject</button>
+                        <button class="btn-action hold" onclick="submitDecision('Hold')">Hold</button>
+                        <button class="btn-action reqinfo" onclick="submitDecision('Request More Info')">Req Info</button>
+                        <button class="btn-action escalate" onclick="submitDecision('Escalate')">Escalate to Manager</button>
+                    </div>
+                </div>
+            `;
+
+            // Setup safety status badge
+            let accountStatusClass = req.customer_id === "CUST-9912" ? "flagged" : "active";
+            let accountStatusText = req.customer_id === "CUST-9912" ? "Flagged (Fraud Risk)" : "Active (Standard)";
+
+            detailPane.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3 style="font-weight:600; font-size:1.05rem;">Review Ticket: ${req.id}</h3>
+                    <span class="status-badge ${req.status.toLowerCase().replace(/ /g, '')}">${req.status}</span>
+                </div>
+
+                <!-- Customer Safety Profiler Card (Phase 3.2 & 3.3) -->
+                <div class="customer-card-box">
+                    <div class="customer-card-header">
+                        <span class="customer-card-title">Customer Risk Profiler</span>
+                        <span class="risk-badge ${riskClass}">${req.risk_level} Risk</span>
+                    </div>
+                    
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-item-label">Customer ID</span>
+                            <span class="detail-item-value" style="font-family:\'JetBrains Mono\', monospace;">${req.customer_id}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-label">Account Status</span>
+                            <span class="acc-status-badge ${accountStatusClass}">${accountStatusText}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-label">Order Ref</span>
+                            <span class="detail-item-value" style="font-family:\'JetBrains Mono\', monospace;">${req.order_id}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-item-label">Purchase Date</span>
+                            <span class="detail-item-value">${req.purchase_date}</span>
+                        </div>
+                        <div class="detail-item" style="grid-column: span 2;">
+                            <span class="detail-item-label">Product Name</span>
+                            <span class="detail-item-value">${req.product}</span>
+                        </div>
+                        <div class="detail-item" style="grid-column: span 2;">
+                            <span class="detail-item-label">Refund Request Value</span>
+                            <span class="detail-item-value" style="font-size:1.25rem; font-weight:700; color:var(--success);">$${req.amount.toFixed(2)}</span>
+                        </div>
+                        <div class="detail-item" style="grid-column: span 2;">
+                            <span class="detail-item-label">Claim Reason</span>
+                            <span class="detail-item-value" style="font-style: italic; color:var(--text-secondary); font-size:0.8rem;">"${req.reason}"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timelines stepper -->
+                <div class="timeline-section">
+                    <span class="detail-item-label">Execution Timeline Checkpoints</span>
+                    <div class="timeline-list">
+                        ${timelineHtml}
+                    </div>
+                </div>
+
+                ${decisionSectionHtml}
+            `;
+        }
+
+        async function submitDecision(action) {
+            if (!selectedRequestId) return;
+            
+            const notes = document.getElementById('decision-notes')?.value || "";
+            const reviewerSelect = document.getElementById('role-select');
+            const reviewerName = reviewerSelect.value;
+            const reviewerRole = reviewerSelect.options[reviewerSelect.selectedIndex].getAttribute('data-role');
+            
+            try {
+                const res = await fetch(`/api/approvals/${selectedRequestId}/decision`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'x-session-id': 'SESSION-PORTAL-WEB'
+                    },
+                    body: JSON.stringify({
+                        action: action,
+                        notes: notes,
+                        reviewer_name: reviewerName,
+                        reviewer_role: reviewerRole
+                    })
+                });
+                
+                const result = await res.json();
+                
+                if (res.status === 200 && result.status === "success") {
+                    showToast("Decision Logged", result.message, "success");
+                    
+                    // Display simulated email sandbox (Phase 3.5)
+                    if (result.notifications && result.notifications.email_body) {
+                        appendInboxPreview(result.notifications, result.req_status);
+                    }
+                    
+                    refreshStats();
+                    refreshApprovals();
+                    loadLogs('audit', document.querySelector('.tab-btn.active'));
+                } else {
+                    const errMsg = result.message || result.detail || "An error occurred";
+                    showToast("Action Gated", errMsg, "danger");
+                }
+            } catch (err) {
+                console.error("Decision submission error:", err);
+                showToast("Connection Error", "Failed to contact compliance server", "danger");
+            }
+        }
+
+        function appendInboxPreview(notifications, status) {
+            const chatMessages = document.getElementById('chat-messages');
+            const emailBox = document.createElement('div');
+            emailBox.className = 'message-bubble system-card';
+            
+            let color = status === "Approved" ? "var(--success)" : "var(--danger)";
+            
+            emailBox.innerHTML = `
+                <div class="inbox-title">📬 Simulated Customer Email Notification</div>
+                <div class="inbox-headers">
+                    <div><b>To:</b> customer-client@domain.com</div>
+                    <div><b>Subject:</b> <span style="color:${color}; font-weight:500;">${notifications.email_subject}</span></div>
+                </div>
+                <div class="inbox-body">${notifications.email_body}</div>
+            `;
+            chatMessages.appendChild(emailBox);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function handleChatKey(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        async function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const query = input.value.trim();
+            if (!query) return;
+            
+            input.value = '';
+            
+            // Add user bubble
+            const chatMessages = document.getElementById('chat-messages');
+            const userBubble = document.createElement('div');
+            userBubble.className = 'message-bubble user';
+            userBubble.innerText = query;
+            chatMessages.appendChild(userBubble);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Call API
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({message: query})
+                });
+                const response = await res.json();
+                
+                // Add agent response bubble
+                const agentBubble = document.createElement('div');
+                agentBubble.className = 'message-bubble agent';
+                agentBubble.innerHTML = response.message;
+                chatMessages.appendChild(agentBubble);
+                
+                if (response.status === "approval_required") {
+                    showToast("Approval Required", "Sensitive payment tool intercepted. Verification ticket spawned.", "warning");
+                    refreshStats();
+                    refreshApprovals();
+                    // Select newly created request
+                    selectedRequestId = response.request_id;
+                    toggleRightPane('queue');
+                } else if (response.status === "auto_approved") {
+                    showToast("Refund Auto-Approved", "Refund was processed automatically using safety policies.", "success");
+                    refreshStats();
+                    refreshApprovals();
+                    if (response.notifications && response.notifications.email_body) {
+                        appendInboxPreview(response.notifications, "Approved");
+                    }
+                    selectedRequestId = response.request_id;
+                    toggleRightPane('history');
+                }
+                
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            } catch (err) {
+                console.error("Chat error:", err);
+                const errBubble = document.createElement('div');
+                errBubble.className = 'message-bubble agent';
+                errBubble.innerText = "Error: Failed to contact the agent backend.";
+                chatMessages.appendChild(errBubble);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+        function onReviewerChange() {
+            const reviewerSelect = document.getElementById('role-select');
+            const name = reviewerSelect.value;
+            showToast("Session Reviewer Changed", `Logged in as: ${name}`, "primary");
+            
+            // Refresh detailed view to update authorization contexts
+            if (selectedRequestId) {
+                const req = allApprovals.find(r => r.id === selectedRequestId);
+                if (req) renderDetailPanel(req);
+            }
+        }
+
+        async function loadLogs(type, btnElement) {
+            // Manage tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+            
+            const consoleBox = document.getElementById('log-console');
+            consoleBox.innerHTML = '<div style="color:var(--text-muted); font-size:0.78rem;">Reading logs feed...</div>';
+            
+            try {
+                const res = await fetch(`/api/logs/${type}`);
+                const logs = await res.json();
+                
+                consoleBox.innerHTML = '';
+                if (logs.length === 0) {
+                    consoleBox.innerHTML = '<div style="color:var(--text-muted);">No log records found.</div>';
+                    return;
+                }
+                
+                logs.forEach(line => {
+                    const logLine = document.createElement('div');
+                    logLine.className = `log-line ${type}-entry`;
+                    
+                    if (type === 'audit') {
+                        const time = new Date(line.timestamp).toLocaleTimeString();
+                        logLine.innerText = `[AUDIT ${time}] ID=${line.request_id} | CUST=${line.customer_id} | Order=${line.order_id} | Amount=$${line.amount} | Decision=${line.decision} | Notes="${line.notes}"`;
+                    } else {
+                        logLine.innerText = line;
+                    }
+                    consoleBox.appendChild(logLine);
+                });
+                consoleBox.scrollTop = consoleBox.scrollHeight;
+            } catch (err) {
+                console.error("Logs load error:", err);
+                consoleBox.innerHTML = '<div style="color:var(--danger);">Error loading logs. Make sure server logs are populated.</div>';
+            }
+        }
+    </script>
+</body>
+</html>

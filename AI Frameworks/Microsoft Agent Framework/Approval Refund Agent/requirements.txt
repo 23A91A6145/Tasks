@@ -1,0 +1,17 @@
+# Core web / API
+fastapi>=0.121.0
+uvicorn>=0.30.0
+pydantic>=2.9
+python-dotenv>=1.0
+
+# CLI / logging / testing
+rich>=13.0
+pytest>=8.0
+
+# Microsoft Agent Framework (core) - provides `@tool(approval_mode="always_require")`
+# and the ToolApprovalMiddleware (Human-in-the-Loop) runtime hooks.
+agent-framework-core>=1.13.0
+
+# Optional: real LLM chat clients for the MAF Agent (100% free tiers)
+# pip install agent-framework-ollama --pre   # Local LLM via Ollama
+# pip install agent-framework-groq --pre     # Cloud LLM via Groq free tier

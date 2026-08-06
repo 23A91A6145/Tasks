@@ -1,0 +1,192 @@
+{
+    "REF-1001": {
+        "id": "REF-1001",
+        "customer_id": "CUST-1045",
+        "order_id": "ORD-3321",
+        "amount": 45.0,
+        "reason": "Incorrect shipping charges",
+        "risk_level": "Low",
+        "product": "Neural Net Processor Schematic",
+        "purchase_date": "2026-08-03",
+        "status": "Approved",
+        "reviewer": "Alice Smith",
+        "role_required": "Reviewer",
+        "notes": "Valid shipping issue. Approved partial refund.",
+        "created_at": "2026-08-05T09:15:00",
+        "handled_at": "2026-08-05T09:30:00",
+        "timeline": [
+            {
+                "step": "Customer Request Received",
+                "timestamp": "2026-08-05T09:15:00"
+            },
+            {
+                "step": "Safety Policies Verified",
+                "timestamp": "2026-08-05T09:16:00"
+            },
+            {
+                "step": "Refund Tool Intercepted (Approval Required)",
+                "timestamp": "2026-08-05T09:17:00"
+            },
+            {
+                "step": "Approved by Human",
+                "timestamp": "2026-08-05T09:30:00"
+            },
+            {
+                "step": "Refund Executed Successfully",
+                "timestamp": "2026-08-05T09:30:00"
+            }
+        ]
+    },
+    "REF-1002": {
+        "id": "REF-1002",
+        "customer_id": "CUST-1045",
+        "order_id": "ORD-5582",
+        "amount": 125.0,
+        "reason": "Wrong Item Delivered",
+        "risk_level": "Low",
+        "product": "T-800 CPU Repair Kit",
+        "purchase_date": "2026-07-28",
+        "status": "Approved",
+        "reviewer": "Bob Johnson",
+        "role_required": "Manager",
+        "notes": "Customer received the wrong repair kit. Approved full refund.",
+        "created_at": "2026-08-05T14:22:00",
+        "handled_at": "2026-08-05T14:35:00",
+        "timeline": [
+            {
+                "step": "Customer Request Received",
+                "timestamp": "2026-08-05T14:22:00"
+            },
+            {
+                "step": "Safety Policies Verified",
+                "timestamp": "2026-08-05T14:23:00"
+            },
+            {
+                "step": "Refund Tool Intercepted (Approval Required)",
+                "timestamp": "2026-08-05T14:24:00"
+            },
+            {
+                "step": "Approved by Human",
+                "timestamp": "2026-08-05T14:35:00"
+            },
+            {
+                "step": "Refund Executed Successfully",
+                "timestamp": "2026-08-05T14:35:00"
+            }
+        ]
+    },
+    "REF-1003": {
+        "id": "REF-1003",
+        "customer_id": "CUST-9912",
+        "order_id": "ORD-0001",
+        "amount": 1500.0,
+        "reason": "Defective item",
+        "risk_level": "High",
+        "product": "Sub-zero Nitrogen Container",
+        "purchase_date": "2026-08-05",
+        "status": "Rejected",
+        "reviewer": "Bob Johnson",
+        "role_required": "Manager",
+        "notes": "Account status flagged as suspicious high risk. Policy rejection.",
+        "created_at": "2026-08-06T08:10:00",
+        "handled_at": "2026-08-06T08:45:00",
+        "timeline": [
+            {
+                "step": "Customer Request Received",
+                "timestamp": "2026-08-06T08:10:00"
+            },
+            {
+                "step": "Safety Policies Verified",
+                "timestamp": "2026-08-06T08:12:00"
+            },
+            {
+                "step": "Refund Tool Intercepted (Approval Required)",
+                "timestamp": "2026-08-06T08:13:00"
+            },
+            {
+                "step": "Rejected by Human",
+                "timestamp": "2026-08-06T08:45:00"
+            },
+            {
+                "step": "Refund Request Cancelled",
+                "timestamp": "2026-08-06T08:45:00"
+            }
+        ]
+    },
+    "REF-1004": {
+        "id": "REF-1004",
+        "customer_id": "CUST-2092",
+        "order_id": "ORD-8812",
+        "amount": 450.0,
+        "reason": "Late delivery, no longer needed",
+        "risk_level": "Medium",
+        "product": "Tactical Radio Comm",
+        "purchase_date": "2026-08-01",
+        "status": "Rejected",
+        "reviewer": "Bob Johnson (Manager)",
+        "role_required": "Manager",
+        "notes": "",
+        "created_at": "2026-08-06T13:53:21.759289",
+        "handled_at": "2026-08-06T13:53:54.201727",
+        "timeline": [
+            {
+                "step": "Customer Request Received",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Safety Policies Verified",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Refund Tool Intercepted (Approval Required)",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Rejected by Human",
+                "timestamp": "2026-08-06T13:53:54.201727"
+            },
+            {
+                "step": "Refund Request Cancelled",
+                "timestamp": "2026-08-06T13:53:54.201727"
+            }
+        ]
+    },
+    "REF-1005": {
+        "id": "REF-1005",
+        "customer_id": "CUST-5511",
+        "order_id": "ORD-3321",
+        "amount": 89.99,
+        "reason": "Item damaged during shipping",
+        "risk_level": "Low",
+        "product": "Neural Net Processor Schematic",
+        "purchase_date": "2026-08-03",
+        "status": "Approved",
+        "reviewer": "Bob Johnson (Manager)",
+        "role_required": "Reviewer",
+        "notes": "",
+        "created_at": "2026-08-06T13:53:21.759289",
+        "handled_at": "2026-08-06T13:54:09.690163",
+        "timeline": [
+            {
+                "step": "Customer Request Received",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Safety Policies Verified",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Refund Tool Intercepted (Approval Required)",
+                "timestamp": "2026-08-06T13:53:21.759289"
+            },
+            {
+                "step": "Approved by Human",
+                "timestamp": "2026-08-06T13:54:09.690163"
+            },
+            {
+                "step": "Refund Executed Successfully",
+                "timestamp": "2026-08-06T13:54:09.690163"
+            }
+        ]
+    }
+}

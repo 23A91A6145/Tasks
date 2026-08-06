@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  refund-agent:
+    build: .
+    container_name: approval_refund_agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/workspace/logs
+      - ./checkpoints:/workspace/checkpoints
+    env_file:
+      - .env
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LLM_PROVIDER=mock
+    restart: unless-stopped
