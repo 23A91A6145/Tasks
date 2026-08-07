@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  platform:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENCRYPTION_KEY=g-M4j8D3q4p5w6e7r8t9y0u1i2o3p4a5s6d7f8g9h0j=
+      - GEMINI_API_KEY=
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./governed_loan_platform.db:/app/governed_loan_platform.db
+    restart: unless-stopped

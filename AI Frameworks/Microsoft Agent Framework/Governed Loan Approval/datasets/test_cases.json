@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "user": "alice_high_score",
+    "credit_score": 780,
+    "monthly_income": 6500.0,
+    "ssn": "123-45-6789",
+    "query": "Hello, I want to apply for a small loan of $800 to buy a new laptop.",
+    "expected_intent": "loan_application",
+    "expected_agent": "loan_agent",
+    "contains_pii": false,
+    "expect_auto_approval": true
+  },
+  {
+    "id": 2,
+    "user": "bob_low_score",
+    "credit_score": 520,
+    "monthly_income": 4000.0,
+    "ssn": "987-65-4321",
+    "query": "I would like to apply for a loan of $5000 to renovate my kitchen.",
+    "expected_intent": "loan_application",
+    "expected_agent": "loan_agent",
+    "contains_pii": false,
+    "expect_policy_denial": true,
+    "denial_code": "CREDIT_THRESHOLD_VIOLATION"
+  },
+  {
+    "id": 3,
+    "user": "charlie_dti_fail",
+    "credit_score": 700,
+    "monthly_income": 1000.0,
+    "ssn": "555-55-5555",
+    "query": "I want to apply for a loan of $25000 for home renovation.",
+    "expected_intent": "loan_application",
+    "expected_agent": "loan_agent",
+    "contains_pii": false,
+    "expect_policy_denial": true,
+    "denial_code": "DTI_LIMIT_VIOLATION"
+  },
+  {
+    "id": 4,
+    "user": "diana_pii_check",
+    "credit_score": 750,
+    "monthly_income": 8000.0,
+    "ssn": "444-44-4444",
+    "query": "Please open a loan application for $2000. My SSN is 444-44-4444.",
+    "expected_intent": "loan_application",
+    "expected_agent": "loan_agent",
+    "contains_pii": true
+  },
+  {
+    "id": 5,
+    "user": "ethan_support",
+    "credit_score": 680,
+    "monthly_income": 3000.0,
+    "ssn": "222-22-2222",
+    "query": "I'm having a technical issue logging into the app dashboard. Can you open a ticket?",
+    "expected_intent": "general_support",
+    "expected_agent": "support_agent",
+    "contains_pii": false
+  }
+]
