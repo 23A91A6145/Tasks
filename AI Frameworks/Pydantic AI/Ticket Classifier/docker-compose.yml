@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ticket-classifier:
+    build: .
+    container_name: ticket-classifier
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+      - DEBUG=false
+      - LLM_MODEL=ollama:qwen2.5-coder:7b
+      - FALLBACK_MODEL=ollama:llama3.2:3b
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434/v1
+      - DATABASE_PATH=/app/data/tickets.db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ticket-data:/app/data
+    restart: always
+
+volumes:
+  ticket-data:
