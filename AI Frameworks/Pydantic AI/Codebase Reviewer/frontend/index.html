@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepRepo Reviewer — Autonomous AI Codebase Intelligence</title>
+    <style>
+        :root {
+            --bg-base: #090d16;
+            --bg-surface: #111827;
+            --bg-card: #182234;
+            --bg-card-hover: #1f2d44;
+            --border-subtle: #27354a;
+            --border-highlight: #3b82f6;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent: #4f46e5;
+            --accent-glow: rgba(79, 70, 229, 0.25);
+            --crit: #ef4444;
+            --high: #f97316;
+            --med: #f59e0b;
+            --low: #10b981;
+            --info: #06b6d4;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Header Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.75rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            font-size: 1.75rem;
+        }
+
+        .logo-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-tag {
+            font-size: 0.75rem;
+            background: var(--accent-glow);
+            color: #818cf8;
+            border: 1px solid #6366f1;
+            padding: 0.15rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--text-secondary);
+        }
+
+        /* Control / Action Panel */
+        .action-panel {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: 2fr 3fr auto;
+            gap: 1rem;
+            align-items: end;
+        }
+
+        @media (max-width: 900px) {
+            .panel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .text-input {
+            width: 100%;
+            background: var(--bg-base);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            padding: 0.65rem 0.85rem;
+            border-radius: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .text-input:focus {
+            border-color: var(--border-highlight);
+        }
+
+        .specialist-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .spec-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--bg-base);
+            border: 1px solid var(--border-subtle);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            user-select: none;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .spec-chip input {
+            accent-color: var(--accent);
+        }
+
+        .spec-chip.active {
+            border-color: #6366f1;
+            color: #fff;
+            background: var(--accent-glow);
+        }
+
+        .btn-run {
+            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .btn-run:hover {
+            opacity: 0.9;
+        }
+
+        .btn-run:active {
+            transform: scale(0.98);
+        }
+
+        /* Metrics Row */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-tile {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+        }
+
+        .tile-value {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .tile-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        .tile-crit .tile-value { color: var(--crit); }
+        .tile-high .tile-value { color: var(--high); }
+        .tile-med .tile-value { color: var(--med); }
+        .tile-low .tile-value { color: var(--low); }
+        .tile-tot .tile-value { color: var(--text-primary); }
+
+        /* Multi-Agent Pipeline Status */
+        .pipeline-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .pipeline-steps {
+            display: flex;
+            gap: 0.75rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .pipeline-node {
+            flex: 1;
+            min-width: 170px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 0.85rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .pipeline-node.done {
+            border-color: var(--low);
+        }
+
+        .pipeline-node.done .node-status {
+            color: var(--low);
+        }
+
+        .node-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .node-status {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Findings Section */
+        .findings-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-pill.active, .filter-pill:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        /* Finding Card */
+        .finding-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--border-subtle);
+        }
+
+        .finding-item.sev-CRITICAL { border-left-color: var(--crit); }
+        .finding-item.sev-HIGH { border-left-color: var(--high); }
+        .finding-item.sev-MEDIUM { border-left-color: var(--med); }
+        .finding-item.sev-LOW { border-left-color: var(--low); }
+
+        .finding-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .finding-badge-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sev-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .sev-CRITICAL .sev-badge { background: rgba(239, 68, 68, 0.2); color: var(--crit); border: 1px solid var(--crit); }
+        .sev-HIGH .sev-badge { background: rgba(249, 115, 22, 0.2); color: var(--high); border: 1px solid var(--high); }
+        .sev-MEDIUM .sev-badge { background: rgba(245, 158, 11, 0.2); color: var(--med); border: 1px solid var(--med); }
+        .sev-LOW .sev-badge { background: rgba(16, 185, 129, 0.2); color: var(--low); border: 1px solid var(--low); }
+
+        .finding-headline {
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .finding-location {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .finding-description {
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            margin-bottom: 0.75rem;
+        }
+
+        .evidence-block {
+            background: #060910;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: #f87171;
+            overflow-x: auto;
+            margin-bottom: 0.75rem;
+        }
+
+        .rec-callout {
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 0.65rem 0.85rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: #c7d2fe;
+        }
+
+        .rec-callout strong {
+            color: #818cf8;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Spinner & Empty State */
+        .spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-group">
+                <span class="logo-icon">🛡️</span>
+                <div>
+                    <span class="logo-title">DeepRepo Reviewer</span>
+                    <span class="logo-tag">Autonomous Multi-Agent</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/docs" target="_blank" class="nav-btn">API Documentation</a>
+                <a href="https://github.com" target="_blank" class="nav-btn">GitHub Repo</a>
+            </div>
+        </header>
+
+        <!-- Action Control Panel -->
+        <div class="action-panel">
+            <div class="panel-grid">
+                <div class="input-group">
+                    <label for="repoPath">Target Repository Directory</label>
+                    <input type="text" id="repoPath" class="text-input" value="fixtures/vulnerable" placeholder="./path/to/repo">
+                </div>
+                <div class="input-group">
+                    <label>Active Specialist Sub-Agents</label>
+                    <div class="specialist-checkboxes">
+                        <label class="spec-chip active"><input type="checkbox" value="security" checked> Security</label>
+                        <label class="spec-chip active"><input type="checkbox" value="bugs" checked> Bugs & Logic</label>
+                        <label class="spec-chip active"><input type="checkbox" value="architecture" checked> Architecture</label>
+                        <label class="spec-chip active"><input type="checkbox" value="performance" checked> Performance</label>
+                        <label class="spec-chip active"><input type="checkbox" value="testing" checked> Testing</label>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn-run" id="btnRunReview" onclick="triggerReview()">
+                        <span id="btnIcon">⚡</span>
+                        <span id="btnText">Run Autonomous Review</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metrics KPI Cards -->
+        <div class="metrics-row">
+            <div class="metric-tile tile-crit">
+                <div class="tile-value" id="countCrit">0</div>
+                <div class="tile-label">Critical Risks</div>
+            </div>
+            <div class="metric-tile tile-high">
+                <div class="tile-value" id="countHigh">0</div>
+                <div class="tile-label">High Severity</div>
+            </div>
+            <div class="metric-tile tile-med">
+                <div class="tile-value" id="countMed">0</div>
+                <div class="tile-label">Medium Severity</div>
+            </div>
+            <div class="metric-tile tile-low">
+                <div class="tile-value" id="countLow">0</div>
+                <div class="tile-label">Low / Info</div>
+            </div>
+            <div class="metric-tile tile-tot">
+                <div class="tile-value" id="countTotal">0</div>
+                <div class="tile-label">Total Findings</div>
+            </div>
+        </div>
+
+        <!-- Multi-Agent Execution Pipeline -->
+        <div class="pipeline-card">
+            <div class="card-header">
+                <h3 class="card-title">🤖 Multi-Agent Execution Pipeline</h3>
+                <span id="pipelineStatus" style="font-size: 0.8rem; color: var(--text-secondary);">Ready to execute</span>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-node done" id="nodeInspect">
+                    <div class="node-name">1. Repository Profiling</div>
+                    <div class="node-status" id="statusInspect">Ready</div>
+                </div>
+                <div class="pipeline-node done" id="nodeDiff">
+                    <div class="node-name">2. Git Diff Analysis</div>
+                    <div class="node-status" id="statusDiff">Ready</div>
+                </div>
+                <div class="pipeline-node done" id="nodeSpecialists">
+                    <div class="node-name">3. Parallel Specialists</div>
+                    <div class="node-status" id="statusSpecialists">Ready</div>
+                </div>
+                <div class="pipeline-node done" id="nodeVerifier">
+                    <div class="node-name">4. Evidence Verification</div>
+                    <div class="node-status" id="statusVerifier">Ready</div>
+                </div>
+                <div class="pipeline-node done" id="nodeReport">
+                    <div class="node-name">5. Report Synthesis</div>
+                    <div class="node-status" id="statusReport">Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Findings Explorer -->
+        <div class="findings-section">
+            <div class="card-header">
+                <h3 class="card-title">🔍 Validated Findings & Evidence</h3>
+                <div class="filter-bar">
+                    <button class="filter-pill active" onclick="applyFilter('ALL')">All</button>
+                    <button class="filter-pill" onclick="applyFilter('CRITICAL')">Critical</button>
+                    <button class="filter-pill" onclick="applyFilter('HIGH')">High</button>
+                    <button class="filter-pill" onclick="applyFilter('MEDIUM')">Medium</button>
+                    <button class="filter-pill" onclick="applyFilter('LOW')">Low</button>
+                </div>
+            </div>
+            <div id="findingsContainer">
+                <div style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                    Click <strong>Run Autonomous Review</strong> above to execute multi-agent analysis on the target repository.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            DeepRepo Reviewer · Powered by Pydantic Deep & Pydantic AI · Autonomous Multi-Agent Software Engineering
+        </footer>
+    </div>
+
+    <script>
+        let currentFindings = [];
+
+        async function triggerReview() {
+            const repoPath = document.getElementById('repoPath').value.trim() || 'fixtures/vulnerable';
+            const checkboxes = document.querySelectorAll('.specialist-checkboxes input:checked');
+            const selected = Array.from(checkboxes).map(cb => cb.value);
+
+            const btn = document.getElementById('btnRunReview');
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+            const pipeStatus = document.getElementById('pipelineStatus');
+
+            btn.disabled = true;
+            btnIcon.innerHTML = '<span class="spinner"></span>';
+            btnText.innerText = 'Analyzing with Multi-Agents...';
+            pipeStatus.innerText = 'Dispatching parallel specialist agents...';
+
+            try {
+                const response = await fetch('/api/v1/review', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ target_path: repoPath, specialists: selected })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Review execution error: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                currentFindings = data.findings || [];
+                renderSummary(data.summary);
+                renderFindings(currentFindings);
+
+                pipeStatus.innerText = `Review completed · Overall Risk: ${data.summary.overall_risk_score}`;
+            } catch (err) {
+                alert(`Execution encountered error: ${err.message}`);
+                pipeStatus.innerText = 'Execution error';
+            } finally {
+                btn.disabled = false;
+                btnIcon.innerHTML = '⚡';
+                btnText.innerText = 'Run Autonomous Review';
+            }
+        }
+
+        function renderSummary(summary) {
+            document.getElementById('countCrit').innerText = summary.critical_count;
+            document.getElementById('countHigh').innerText = summary.high_count;
+            document.getElementById('countMed').innerText = summary.medium_count;
+            document.getElementById('countLow').innerText = summary.low_count + summary.info_count;
+            document.getElementById('countTotal').innerText = summary.total_findings;
+        }
+
+        function renderFindings(findings) {
+            const container = document.getElementById('findingsContainer');
+            if (!findings || findings.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: var(--low);">
+                        <h3>✅ Zero Vulnerabilities Detected</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">The inspected codebase passed all specialist sub-agent checks.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = findings.map(f => `
+                <div class="finding-item sev-${f.severity}" data-sev="${f.severity}">
+                    <div class="finding-top">
+                        <div class="finding-badge-group">
+                            <span class="sev-badge">${f.severity}</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">#${f.id}</span>
+                            <span class="finding-headline">${escapeHtml(f.title)}</span>
+                        </div>
+                        <div class="finding-location">${escapeHtml(f.file_path)}:${f.line_start || ''}</div>
+                    </div>
+                    <div class="finding-description">${escapeHtml(f.description)}</div>
+                    ${f.evidence ? `<pre class="evidence-block"><code>${escapeHtml(f.evidence)}</code></pre>` : ''}
+                    <div class="rec-callout">
+                        <strong>💡 Actionable Recommendation:</strong>
+                        ${escapeHtml(f.recommendation)}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function applyFilter(sev) {
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toUpperCase() === sev || (sev === 'ALL' && btn.innerText === 'All'));
+            });
+
+            document.querySelectorAll('.finding-item').forEach(item => {
+                if (sev === 'ALL' || item.getAttribute('data-sev') === sev) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.innerText = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
