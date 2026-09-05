@@ -1,0 +1,3 @@
+{"id": "bench_01", "query": "Compare LangGraph and CrewAI for production enterprise systems in 2026", "expected_domains": ["arxiv.org", "github.io", "crewai.com"], "minimum_citations": 3, "required_aspects": ["state persistence", "human in the loop", "latency", "mcp"]}
+{"id": "bench_02", "query": "Evaluate Model Context Protocol (MCP) security implications and authorization mechanisms", "expected_domains": ["anthropic.com", "github.com", "cve.org"], "minimum_citations": 2, "required_aspects": ["tool isolation", "ssrf", "injection"]}
+{"id": "bench_03", "query": "Hybrid dense and sparse retrieval using Reciprocal Rank Fusion on pgvector", "expected_domains": ["arxiv.org", "postgresql.org"], "minimum_citations": 2, "required_aspects": ["bm25", "hnsw", "rrf k=60"]}
