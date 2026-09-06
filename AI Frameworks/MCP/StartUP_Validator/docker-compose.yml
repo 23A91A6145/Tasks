@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  startup-validator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: startup-validator-ai
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Startup Validator AI
+      - ENVIRONMENT=production
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - DATABASE_PATH=data/startup_validator.db
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
