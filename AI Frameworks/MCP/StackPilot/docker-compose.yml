@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - DATABASE_URL=sqlite+aiosqlite:///./stackpilot.db
+    volumes:
+      - ./samples:/app/samples
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../infra/docker/Dockerfile.frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
