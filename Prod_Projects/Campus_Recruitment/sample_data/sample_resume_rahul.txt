@@ -1,0 +1,34 @@
+Rahul Kumar
+Bangalore, India | rahul.kumar@example.com | +91 98765 43210
+GitHub: github.com/rahulkumar-dev | LinkedIn: linkedin.com/in/rahulkumar
+
+Professional Summary:
+Passionate Backend Developer with 1.5 years of experience building high-throughput REST APIs and database-driven web applications. Strong expertise in Python, FastAPI, PostgreSQL, and Docker containerization.
+
+Technical Skills:
+- Languages: Python, SQL, Bash
+- Frameworks: FastAPI, Flask
+- Databases: PostgreSQL, SQLite
+- DevOps & Tools: Docker, Git, GitHub, Linux, Postman
+- Concepts: REST API design, Microservices architecture, Object-Oriented Programming
+
+Experience:
+Junior Backend Engineer | TechNova Solutions (July 2023 - Present)
+- Developed and maintained 12+ RESTful API endpoints using FastAPI and PostgreSQL, serving over 150,000 monthly active users.
+- Optimized slow relational database queries and implemented database indexing, reducing p95 API response times by 32%.
+- Containerized development and staging environments using Docker, cutting developer onboarding time from 2 days to 30 minutes.
+- Collaborated in an agile team using Git and GitHub pull requests with 95% test coverage.
+
+Projects:
+AI Resume Intelligence Platform
+- Architected a document processing microservice utilizing Python, FastAPI, and PyMuPDF to extract and match technical skills.
+- Integrated PostgreSQL for candidate record storage and implemented Docker containers for local deployment.
+- Handled concurrent document uploads with response times under 200ms for standard PDF files.
+
+E-Commerce Order Management API
+- Created a scalable inventory and order processing API using FastAPI and PostgreSQL.
+- Implemented JWT authentication and role-based access control (RBAC).
+
+Education:
+B.Tech in Computer Science & Engineering
+National Institute of Technology (NIT) | CGPA: 8.6/10 (2019 - 2023)

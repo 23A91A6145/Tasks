@@ -1,0 +1,23 @@
+Arjun Patel
+Pune, India | arjun.patel@example.com | +91 90000 11223
+GitHub: github.com/arjunpatel | LinkedIn: linkedin.com/in/arjunpatel
+
+Summary:
+Entry-level Frontend and Web Developer with interest in full-stack technologies. Hands-on experience with HTML5, CSS3, JavaScript, and introductory Python scripting.
+
+Technical Skills:
+- Frontend: HTML5, CSS3, JavaScript, Bootstrap
+- Backend: Python (Basics)
+- Tools: Git, GitHub, VS Code
+
+Projects:
+Campus Event Portal
+- Developed responsive web pages for college cultural fest using HTML5, CSS3, and JavaScript.
+- Built simple contact form validator and linked with backend mailer.
+
+Personal Portfolio
+- Built personal responsive website with interactive project showcase and contact forms.
+
+Education:
+B.E. in Computer Science
+Pune University (2020 - 2024)

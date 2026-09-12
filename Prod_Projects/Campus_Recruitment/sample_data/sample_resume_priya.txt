@@ -1,0 +1,25 @@
+Priya Sharma
+Hyderabad, India | priya.sharma@example.com | +91 91234 56789
+GitHub: github.com/priyasharma-ai | LinkedIn: linkedin.com/in/priyasharma-ai
+
+Summary:
+Data & AI Engineer with strong fundamentals in Python, Machine Learning, PyTorch, and Generative AI. Proven experience building LLM pipelines, SQL data analysis, and scalable Python scripts.
+
+Technical Skills:
+- Languages: Python, SQL
+- AI/ML: PyTorch, Generative AI, RAG, Large Language Models, Deep Learning, Pandas, NumPy
+- Tools & Databases: PostgreSQL, Git, GitHub, Linux, Jupyter Notebooks
+
+Projects:
+Enterprise RAG Assistant
+- Developed a retrieval-augmented generation question-answering system using Python, PyTorch embeddings, and vector similarity search.
+- Cleaned and indexed over 50,000 enterprise PDF documents with optimized SQL metadata tracking.
+- Deployed a prototype interface achieving 91% user satisfaction rating in internal tests.
+
+Predictive Customer Analytics
+- Built machine learning regression models in Python predicting customer churn with 84% ROC-AUC accuracy.
+- Managed relational datasets in PostgreSQL and automated data extraction pipelines.
+
+Education:
+B.Tech in Information Technology
+VNR VJIET | CGPA: 8.9/10 (2020 - 2024)

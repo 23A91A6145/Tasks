@@ -1,0 +1,27 @@
+Job Title: Backend Developer - Hashira Drive
+Company: Hashira Technologies
+Location: Remote / Bangalore
+Experience: 0-2 years
+
+Role Overview:
+We are seeking an enthusiastic Backend Engineer to join our core product team. You will be responsible for building high-performance REST APIs, architecting scalable relational and non-relational database schemas, and collaborating on containerized cloud microservices.
+
+Key Requirements (Mandatory):
+- Proficient in Python and modern backend frameworks (FastAPI or Django)
+- Strong experience with relational databases (PostgreSQL or MySQL) and writing optimized SQL queries
+- Practical knowledge of designing and implementing REST APIs
+- Familiarity with containerization using Docker
+- Version control using Git and GitHub
+
+Preferred Qualifications (Nice to Have):
+- Experience with in-memory caching solutions like Redis
+- Cloud deployment experience on AWS (EC2, S3, Lambda) or GCP
+- Understanding of container orchestration with Kubernetes
+- Familiarity with CI/CD automation pipelines (GitHub Actions)
+- Basic exposure to asynchronous queues (Celery, Kafka)
+
+Responsibilities:
+- Design, build, and maintain efficient, reusable, and reliable backend services.
+- Optimize database queries and API response times.
+- Collaborate with frontend engineers to integrate user-facing elements.
+- Participate in code reviews and automated testing.
